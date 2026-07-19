@@ -135,3 +135,8 @@ ol.references a:hover { text-decoration: underline; }
 .proj { font-weight: 700; text-decoration: none; border: 1px solid var(--line); border-radius: 999px; padding: .05rem .55rem; }
 .proj-fsp { color: #b8252b; } .proj-fsspx { color: #1e4f8f; } .proj-tl { color: #1b7a3d; }
 .rel a { color: var(--accent); }
+
+/* Dedicated term pages */
+.term-link { color: var(--ink); text-decoration: none; }
+.term-link:hover { color: var(--accent); text-decoration: underline; }
+.term-meta { font-size: .85rem; color: var(--muted); display: flex; flex-wrap: wrap; gap: .3rem .8rem; align-items: center; margin-top: 1rem; }

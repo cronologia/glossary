@@ -66,11 +66,66 @@ function renderTerm(t, refNumById, termById) {
     .map((p) => `<a class="proj proj-${esc(p)}" href="${PROJECTS[p].url}">${PROJECTS[p].name}</a>`)
     .join('');
   return `    <article class="term" id="${esc(t.id)}">
-      <h3><a class="anchor" href="#${esc(t.id)}">#</a>${esc(t.term)}</h3>
+      <h3><a class="anchor" href="#${esc(t.id)}">#</a><a class="term-link" href="${esc(t.id)}/">${esc(t.term)}</a></h3>
       ${t.variants ? `<p class="variants">${esc(t.variants)}</p>` : ''}
       <p class="def">${esc(t.definition)}${renderCites(t.sources, refNumById)}</p>
       <p class="meta">${projects}${related ? `<span class="rel">Related: ${related}</span>` : ''}</p>
     </article>`;
+}
+
+/**
+ * Render a dedicated standalone page for one term, at docs/<id>/index.html —
+ * so other Cronologia pages can reference a stable per-term URL
+ * (e.g. /glossary/latae-sententiae/). The index page's #anchors keep working.
+ */
+function renderTermPage(t, data, termById) {
+  const { meta, references } = data;
+  const used = (t.sources || []).map((id) => references.find((r) => r.id === id)).filter(Boolean);
+  const localNum = new Map(used.map((r, i) => [r.id, i + 1]));
+  const related = (t.related || [])
+    .filter((id) => termById.has(id))
+    .map((id) => `<a href="../${esc(id)}/">${esc(termById.get(id).term)}</a>`)
+    .join(' · ');
+  const projects = (t.projects || [])
+    .filter((p) => PROJECTS[p])
+    .map((p) => `<a class="proj proj-${esc(p)}" href="${PROJECTS[p].url}">${PROJECTS[p].name}</a>`)
+    .join('');
+  return `<!DOCTYPE html>
+<html lang="${esc(meta.language || 'en')}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>${esc(t.term)} — Cronologia Glossary</title>
+  <meta name="description" content="${esc(t.definition.slice(0, 155))}">
+${ANALYTICS}
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <p class="updated"><a href="../" style="color:#fff">← Cronologia Glossary</a></p>
+      <h1>${esc(t.term)}</h1>
+      ${t.variants ? `<p class="subtitle">${esc(t.variants)}</p>` : ''}
+    </div>
+  </header>
+  <main class="wrap">
+    <section>
+      <p class="def">${esc(t.definition)}${renderCites(t.sources, localNum)}</p>
+      <p class="meta term-meta">${projects}${related ? `<span class="rel">Related: ${related}</span>` : ''}</p>
+    </section>
+    <section id="references">
+      <h2>Sources</h2>
+      <ol class="references">
+${used.map((r, i) => `        <li id="ref-${i + 1}"><a href="${esc(r.url)}" rel="noopener noreferrer" target="_blank">${esc(r.title)}</a><span class="ref-meta">${esc(r.publisher)} · ${esc(r.type)}</span></li>`).join('\n')}
+      </ol>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="wrap"><p>Part of the <a href="../">Cronologia Glossary</a> — every definition cited. Corrections welcome via pull request.</p></div>
+  </footer>
+</body>
+</html>
+`;
 }
 
 function renderPage(data) {
@@ -132,11 +187,17 @@ function main() {
   const data = JSON.parse(fs.readFileSync(DATA_FILE, 'utf8'));
   fs.mkdirSync(OUT_DIR, { recursive: true });
   fs.writeFileSync(path.join(OUT_DIR, 'index.html'), renderPage(data));
+  const termById = new Map(data.terms.map((t) => [t.id, t]));
+  for (const t of data.terms) {
+    const dir = path.join(OUT_DIR, t.id);
+    fs.mkdirSync(dir, { recursive: true });
+    fs.writeFileSync(path.join(dir, 'index.html'), renderTermPage(t, data, termById));
+  }
   fs.copyFileSync(path.join(SRC_DIR, 'styles.css'), path.join(OUT_DIR, 'styles.css'));
   fs.writeFileSync(path.join(OUT_DIR, '.nojekyll'), '');
-  console.log(`Built docs/index.html (${data.terms.length} terms, ${data.references.length} references).`);
+  console.log(`Built docs/index.html + ${data.terms.length} term pages (${data.references.length} references).`);
 }
 
 if (require.main === module) main();
 
-module.exports = { esc, renderCites, renderPage };
+module.exports = { esc, renderCites, renderPage, renderTermPage };

@@ -3,14 +3,17 @@
 The **shared glossary** of the [Cronologia](https://cronologia.github.io)
 project family: short, source-referenced definitions of the canonical,
 theological and political vocabulary the chronologies rely on — with **one
-stable anchor per term**, so project pages link to a definition instead of
-re-explaining it:
+dedicated page per term**, so other pages reference a stable term-specific
+URL instead of re-explaining the definition:
 
 ```
-https://cronologia.github.io/glossary/#latae-sententiae
-https://cronologia.github.io/glossary/#sedevacantism
-https://cronologia.github.io/glossary/#cebs
+https://cronologia.github.io/glossary/latae-sententiae/
+https://cronologia.github.io/glossary/sedevacantism/
+https://cronologia.github.io/glossary/cebs/
 ```
+
+(The index page at `/glossary/` keeps `#anchor` permalinks too; the dedicated
+page is the canonical reference link.)
 
 Same architecture as every Cronologia site (see `cronologia/core`): a single
 JSON file is the source of truth, compiled by a zero-dependency Node script
@@ -22,8 +25,8 @@ into `docs/`, served by GitHub Pages.
   — a glossary of contested vocabulary is itself a Cronologia-grade artifact.
 - **Arguments stay in the projects.** The projects' disambiguation sections
   hold the disputes; they link here for the terms.
-- **Stable anchors are API.** A term's `id` is its public URL — never rename
-  one; if a term must change, keep the old id as a variant entry.
+- **Stable URLs are API.** A term's `id` is its public page URL — never
+  rename one; if a term must change, keep the old id as a variant entry.
 
 ## Editing
 
