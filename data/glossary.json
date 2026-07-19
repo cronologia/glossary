@@ -142,9 +142,81 @@
       "id": "tariqa",
       "term": "Tariqa (and the Maryamiyya)",
       "definition": "A Sufi order — a Muslim initiatic brotherhood under a shaykh. The Maryamiyya is the tariqa founded by the perennialist Frithjof Schuon; the documented membership of Rama Coomaraswamy — sedevacantist author and sometime professor at the SSPX's US seminary — is the reason a Sufi term appears in a Catholic-traditionalism glossary.",
-      "projects": ["fsspx"],
-      "related": ["sedevacantism"],
+      "projects": ["fsspx", "tariqa"],
+      "related": ["sedevacantism", "silsila", "bayah", "traditionalist-school"],
       "sources": ["wikipedia-maryamiyya"]
+    },
+    {
+      "id": "silsila",
+      "term": "Silsila",
+      "variants": "silsilah; initiatic chain, spiritual genealogy",
+      "definition": "The chain of spiritual transmission ('chain, lineage' in Arabic) through which a Sufi order traces the authority of its living shaykh back, master to master, to the Prophet Muhammad — most orders route the chain through Ali, the Naqshbandiyya through Abu Bakr. The silsila functions as a shaykh's credential and source of legitimacy: initiation counts because the initiator himself stands in an unbroken chain. The full style of Schuon's order — Tariqa Shadhiliyya-Darqawiyya-Alawiyya-Maryamiyya — is a silsila compressed into a name.",
+      "projects": ["tariqa"],
+      "related": ["tariqa", "khalifa", "bayah"],
+      "sources": ["wikipedia-silsila", "britannica-tariqa", "wikipedia-maryamiyya"]
+    },
+    {
+      "id": "muqaddam",
+      "term": "Muqaddam",
+      "variants": "an Arabic title also used for civil and military officials; in Sufism, the shaykh's authorized representative",
+      "definition": "In Sufi orders, a disciple (murid) whom the guide — shaykh, pir or murshid — has authorized to assist in teaching the path to other students: a delegated local representative of the master, a usage found in the Tijaniyya, Shadhiliyya, Rahmaniyya and related orders. Outside Sufism the same title has named village intermediaries in medieval India and an officer rank in modern Arab armies. The term recurs in the tariqa project's connection threads, which document who held a muqaddam's authorization, where and when.",
+      "projects": ["tariqa"],
+      "related": ["tariqa", "khalifa"],
+      "sources": ["wikipedia-muqaddam"]
+    },
+    {
+      "id": "khalifa",
+      "term": "Khalifa (Sufi usage)",
+      "variants": "khalīfa, 'successor, deputy'; khilafat (the office conferred); cf. caliph",
+      "definition": "Literally 'successor' or 'deputy' — the word behind 'caliph', the successor of Muhammad at the head of the Muslim community. In Sufi usage it is the disciple a shaykh designates as his deputy or successor: in most cases the shaykh nominates his khalifa during his own lifetime, and the transfer of this khilafat from master to spiritual descendant is what a silsila records link by link. Whether a given khilafat was in fact conferred is often disputed in order histories; the project pages date and attribute such claims.",
+      "projects": ["tariqa"],
+      "related": ["silsila", "muqaddam", "tariqa"],
+      "sources": ["wikipedia-khalifa", "wikipedia-tariqa", "wikipedia-silsila"]
+    },
+    {
+      "id": "zawiya",
+      "term": "Zawiya",
+      "variants": "zāwiya, zaouia; cf. khanqah, tekke",
+      "definition": "A Sufi lodge ('corner, nook' in Arabic): the building or complex where an order teaches, houses travelers and holds its dhikr — functioning variously as oratory, school, hostel and shrine, often around a founder's tomb. It is the usual term in North and West Africa; the Persianate world uses khanqah and the Ottoman-Turkish world tekke for the functionally similar institution.",
+      "projects": ["tariqa"],
+      "related": ["tariqa", "dhikr"],
+      "sources": ["wikipedia-zawiya", "britannica-tariqa"]
+    },
+    {
+      "id": "dhikr",
+      "term": "Dhikr",
+      "variants": "zikr; 'remembrance' of God",
+      "definition": "The practice of remembering God by repeating his names or set formulas ('there is no god but God', 'glory be to God'), aloud or silently, alone or in assembly, often counted on beads. Each Sufi order transmits its own dhikr with prescribed posture and breathing, and the collective dhikr session is the characteristic ritual of tariqa life — described by Sufis as a method, alongside meditation (fikr), of striving toward oneness with God.",
+      "projects": ["tariqa"],
+      "related": ["tariqa", "zawiya"],
+      "sources": ["wikipedia-dhikr", "britannica-dhikr"]
+    },
+    {
+      "id": "bayah",
+      "term": "Bay'ah",
+      "variants": "baya, bay'at; oath of allegiance, Sufi initiation pledge",
+      "definition": "The Islamic oath of allegiance — from a commercial root, originally the handclasp sealing a bargain — historically given to caliphs and still given to monarchs in Morocco and Saudi Arabia. In Sufism it is the rite of initiation: the seeker's pledge of allegiance to the shaykh of a tariqa, which creates the master–disciple bond and grafts the newcomer onto the order's silsila. In the Cronologia projects, saying someone 'took bay'ah' is therefore a membership claim — initiation, not mere sympathy — and enters a dataset only with self-disclosure or scholarship behind it.",
+      "projects": ["tariqa"],
+      "related": ["tariqa", "silsila"],
+      "sources": ["wikipedia-bayah"]
+    },
+    {
+      "id": "philosophia-perennis",
+      "term": "Philosophia perennis",
+      "variants": "perennial philosophy; perennialism",
+      "definition": "A Latin phrase with four distinct careers, kept apart in the perennialism project's disambiguation. (1) Agostino Steuco coined it (De perenni philosophia, 1540) for the thesis that one God-given wisdom, revealed at the beginning, persists through the ancient philosophers into Christianity. (2) Leibniz took the term over — the first philosopher to use it without crediting Steuco — recasting the primordial truths as seeds to be developed by philosophical progress. (3) Aldous Huxley's The Perennial Philosophy (1945) made it the name of an experiential mystical universalism: a divine Reality accessible in mystical experience across all religions. (4) The Traditionalist School of Guénon and Schuon holds a metaphysical version — a single primordial tradition transmitted only through the orthodox revealed religions — and rejected Huxley-style syncretism. Same phrase, four lineages: a statement about 'perennialism' must say which one it means.",
+      "projects": ["perennialism"],
+      "related": ["traditionalist-school"],
+      "sources": ["wikipedia-perennial-philosophy", "lexicon-steuco", "wikipedia-traditionalist-school"]
+    },
+    {
+      "id": "traditionalist-school",
+      "term": "Traditionalist School",
+      "variants": "Guénonian Traditionalism; cf. Catholic traditionalism, Evolian 'Traditionalism'",
+      "definition": "The school of thought stemming from René Guénon, Ananda Coomaraswamy and Frithjof Schuon: perennialism in its metaphysical form — one primordial truth underlying the major world religions in their orthodox forms — joined, in Mark Sedgwick's summary, to the conviction that history is decline rather than progress. Capitalized, the label names this movement only. It is distinct in origin from Catholic traditionalism (attachment to the pre-Vatican II Mass and doctrine — the fsspx project's subject), and distinct again from Julius Evola's politicized 'Traditionalism', the reading later invoked in radical-right politics, whose compatibility with the school scholars dispute. Three different 'traditionalisms': the project pages disambiguate on sight and document the individual bridges between them case by case.",
+      "projects": ["perennialism", "tariqa", "fsspx"],
+      "related": ["philosophia-perennis", "tariqa"],
+      "sources": ["wikipedia-traditionalist-school", "sedgwick-traditionalism-2023"]
     }
   ],
   "references": [
@@ -164,6 +236,19 @@
     { "id": "wikipedia-ddf", "title": "Dicastery for the Doctrine of the Faith", "url": "https://en.wikipedia.org/wiki/Dicastery_for_the_Doctrine_of_the_Faith", "publisher": "Wikipedia (EN)", "type": "encyclopedia" },
     { "id": "wikipedia-tl-pt", "title": "Teologia da libertação", "url": "https://pt.wikipedia.org/wiki/Teologia_da_liberta%C3%A7%C3%A3o", "publisher": "Wikipedia (PT)", "type": "encyclopedia" },
     { "id": "wikipedia-teologia-pueblo", "title": "Theology of the People", "url": "https://en.wikipedia.org/wiki/Theology_of_the_People", "publisher": "Wikipedia (EN)", "type": "encyclopedia" },
-    { "id": "wikipedia-maryamiyya", "title": "Maryamiyya Order", "url": "https://en.wikipedia.org/wiki/Maryamiyya_Order", "publisher": "Wikipedia (EN)", "type": "encyclopedia" }
+    { "id": "wikipedia-maryamiyya", "title": "Maryamiyya Order", "url": "https://en.wikipedia.org/wiki/Maryamiyya_Order", "publisher": "Wikipedia (EN)", "type": "encyclopedia" },
+    { "id": "wikipedia-silsila", "title": "Silsila", "url": "https://en.wikipedia.org/wiki/Silsila", "publisher": "Wikipedia (EN)", "type": "encyclopedia" },
+    { "id": "wikipedia-muqaddam", "title": "Muqaddam", "url": "https://en.wikipedia.org/wiki/Muqaddam", "publisher": "Wikipedia (EN)", "type": "encyclopedia" },
+    { "id": "wikipedia-khalifa", "title": "Khalifa", "url": "https://en.wikipedia.org/wiki/Khalifa", "publisher": "Wikipedia (EN)", "type": "encyclopedia" },
+    { "id": "wikipedia-tariqa", "title": "Tariqa", "url": "https://en.wikipedia.org/wiki/Tariqa", "publisher": "Wikipedia (EN)", "type": "encyclopedia" },
+    { "id": "britannica-tariqa", "title": "Tariqa (ṭarīqah) — Islamic mysticism", "url": "https://www.britannica.com/topic/tariqa", "publisher": "Encyclopaedia Britannica", "type": "encyclopedia" },
+    { "id": "wikipedia-zawiya", "title": "Zawiya (institution)", "url": "https://en.wikipedia.org/wiki/Zawiya_(institution)", "publisher": "Wikipedia (EN)", "type": "encyclopedia" },
+    { "id": "wikipedia-dhikr", "title": "Dhikr", "url": "https://en.wikipedia.org/wiki/Dhikr", "publisher": "Wikipedia (EN)", "type": "encyclopedia" },
+    { "id": "britannica-dhikr", "title": "Dhikr — Islamic ritual prayer", "url": "https://www.britannica.com/topic/dhikr", "publisher": "Encyclopaedia Britannica", "type": "encyclopedia" },
+    { "id": "wikipedia-bayah", "title": "Bay'ah", "url": "https://en.wikipedia.org/wiki/Bay%27ah", "publisher": "Wikipedia (EN)", "type": "encyclopedia" },
+    { "id": "wikipedia-perennial-philosophy", "title": "Perennial philosophy", "url": "https://en.wikipedia.org/wiki/Perennial_philosophy", "publisher": "Wikipedia (EN)", "type": "encyclopedia" },
+    { "id": "lexicon-steuco", "title": "Hannes Amberger, 'Revelation and Progress: The Concept of philosophia perennis from Steuco to Leibniz' (Lexicon Philosophicum)", "url": "https://lexicon.cnr.it/ojs/index.php/LP/article/view/655", "publisher": "CNR — Lexicon Philosophicum", "type": "academic" },
+    { "id": "wikipedia-traditionalist-school", "title": "Traditionalist School (perennialism)", "url": "https://en.wikipedia.org/wiki/Traditionalist_School_(perennialism)", "publisher": "Wikipedia (EN)", "type": "encyclopedia" },
+    { "id": "sedgwick-traditionalism-2023", "title": "Mark Sedgwick, 'Traditionalism: The Radical Project for Restoring Sacred Order' (2023)", "url": "https://global.oup.com/academic/product/traditionalism-9780197683767", "publisher": "Oxford University Press", "type": "academic" }
   ]
 }

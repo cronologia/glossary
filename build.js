@@ -32,6 +32,8 @@ const ANALYTICS = `  <!-- Google tag (gtag.js) -->
 const PROJECTS = {
   fsp: { name: 'fsp', url: 'https://cronologia.github.io/fsp/' },
   fsspx: { name: 'fsspx', url: 'https://cronologia.github.io/fsspx/' },
+  perennialism: { name: 'perennialism', url: 'https://cronologia.github.io/perennialism/' },
+  tariqa: { name: 'tariqa', url: 'https://cronologia.github.io/tariqa/' },
   tl: { name: 'tl', url: 'https://cronologia.github.io/tl/' },
 };
 
