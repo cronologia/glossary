@@ -1,0 +1,169 @@
+{
+  "meta": {
+    "title": "Cronologia — Glossary",
+    "subtitle": "Cited definitions of contested terms",
+    "description": "The shared glossary of the Cronologia projects: short, source-referenced definitions of the canonical, theological and political vocabulary the chronologies rely on — one stable anchor per term, so project pages link instead of re-explaining.",
+    "language": "en",
+    "lastUpdated": "2026-07-19",
+    "dataQualityNote": "Definitions only, each cited like any other fact in the Cronologia family. Arguments about these terms stay in the projects' own disambiguation sections, which link here. Corrections against primary sources are welcome."
+  },
+  "terms": [
+    {
+      "id": "latae-sententiae",
+      "term": "Latae sententiae",
+      "variants": "automatic penalty; cf. ferendae sententiae",
+      "definition": "A penalty in Catholic canon law that is incurred automatically ('by the sentence already passed') at the moment the offense is committed, without a judgment being pronounced — as opposed to a ferendae sententiae penalty, which binds only after being imposed by a superior or court (can. 1314). The 1988 and 2026 excommunications in the SSPX story were declared as latae sententiae: the declarations state that the penalty had already been incurred by the act.",
+      "projects": ["fsspx"],
+      "related": ["excommunication", "schism"],
+      "sources": ["cic-1983"]
+    },
+    {
+      "id": "excommunication",
+      "term": "Excommunication",
+      "definition": "The gravest canonical censure: the excommunicated person is forbidden to celebrate or receive the sacraments and to exercise ecclesiastical offices or functions (can. 1331). Canonists stress it is a medicinal penalty aimed at repentance, not a declaration that someone is 'expelled from the Church' — a nuance both sides of the traditionalist disputes invoke.",
+      "projects": ["fsspx"],
+      "related": ["latae-sententiae", "schism", "suspension-a-divinis"],
+      "sources": ["cic-1983"]
+    },
+    {
+      "id": "suspension-a-divinis",
+      "term": "Suspension a divinis",
+      "definition": "A censure that forbids a cleric the exercise of the power of orders — celebrating Mass, administering sacraments (can. 1333). Marcel Lefebvre was suspended a divinis in July 1976 after ordaining priests against an explicit prohibition; Ernesto Cardenal was suspended in 1984 for holding government office, a suspension lifted by Francis in 2019.",
+      "projects": ["fsspx", "tl"],
+      "related": ["excommunication"],
+      "sources": ["cic-1983", "wikipedia-sspx", "vatican-news-cardenal"]
+    },
+    {
+      "id": "schism",
+      "term": "Schism",
+      "definition": "In the 1983 Code's definition, 'the refusal of submission to the Supreme Pontiff or of communion with the members of the Church subject to him' (can. 751). Whether a given group is 'in schism' is often exactly what is disputed: the Holy See called the 1988 Écône consecrations 'a schismatic act' while later officials described the SSPX as not formally schismatic — and the 2026 decree changed that language again. Statements must be dated and attributed.",
+      "projects": ["fsspx"],
+      "related": ["canonical-irregularity", "excommunication", "sedevacantism"],
+      "sources": ["cic-1983", "ecclesia-dei-1988"]
+    },
+    {
+      "id": "canonical-irregularity",
+      "term": "Canonical irregularity ('no canonical status')",
+      "definition": "The Holy See's characterization of the SSPX's position between 1975 and 2026: the Society possessed 'no canonical status in the Church' and its ministers 'do not legitimately exercise any ministry' — Benedict XVI's 2009 wording — while officials in the same era distinguished this irregular condition from formal schism. A status label, not a doctrinal verdict; always date it.",
+      "projects": ["fsspx"],
+      "related": ["schism", "pia-unio"],
+      "sources": ["benedict-2009-letter"]
+    },
+    {
+      "id": "motu-proprio",
+      "term": "Motu proprio",
+      "definition": "A papal legal document issued 'on his own initiative', not in response to a request. Several hinge documents of these chronologies are motu proprio: Ecclesia Dei (1988), Summorum Pontificum (2007), Traditionis Custodes (2021).",
+      "projects": ["fsspx"],
+      "related": [],
+      "sources": ["wikipedia-motu-proprio"]
+    },
+    {
+      "id": "pia-unio",
+      "term": "Pia unio (pious union)",
+      "definition": "An associational form of canon law under which the SSPX was erected in 1970 by Bishop Charrière of Lausanne, Geneva and Fribourg, on an ad experimentum basis — the diocesan approval whose 1975 withdrawal (disputed by the Society) opened the canonical conflict.",
+      "projects": ["fsspx"],
+      "related": ["canonical-irregularity"],
+      "sources": ["wikipedia-sspx"]
+    },
+    {
+      "id": "sedevacantism",
+      "term": "Sedevacantism",
+      "definition": "The position that the See of Peter is vacant — that the men elected as pope since Vatican II (the cut-off varies by group) are not true popes. Distinct from the SSPX's position, which recognizes the reigning pope while resisting parts of Vatican II; groups such as the SSPV milieu and the CMRI are sedevacantist. First systematically published by Fr. Joaquín Sáenz y Arriaga in the early 1970s.",
+      "projects": ["fsspx"],
+      "related": ["sedeprivationism", "conclavism", "schism"],
+      "sources": ["wikipedia-sedevacantism"]
+    },
+    {
+      "id": "sedeprivationism",
+      "term": "Sedeprivationism (Cassiciacum thesis)",
+      "definition": "The refined vacant-see position formulated by the Dominican theologian Michel-Louis Guérard des Lauriers (a former Écône professor) in the Cahiers de Cassiciacum (1979–81): the occupant of the see is pope 'materially' but not 'formally' — retaining the designation but not the authority. Followed today by institutes descending from his Thục-line consecration (1981).",
+      "projects": ["fsspx"],
+      "related": ["sedevacantism", "conclavism"],
+      "sources": ["wikipedia-sedeprivationism"]
+    },
+    {
+      "id": "conclavism",
+      "term": "Conclavism",
+      "definition": "Going beyond declaring the see vacant to electing one's own pope. The Palmarian Church of El Palmar de Troya (Spain) is the best-known case: after the 1976 Thục consecrations, Clemente Domínguez proclaimed himself 'Pope Gregory XVII' in 1978. No connection to the SSPX, which the Cronologia genealogies keep visually separate.",
+      "projects": ["fsspx"],
+      "related": ["sedevacantism", "sedeprivationism"],
+      "sources": ["wikipedia-palmarian"]
+    },
+    {
+      "id": "cdf-ddf",
+      "term": "CDF / DDF",
+      "variants": "Congregation (now Dicastery) for the Doctrine of the Faith; historically the Holy Office",
+      "definition": "The Vatican's doctrinal watchdog: the Congregation for the Doctrine of the Faith, renamed Dicastery (DDF) in the 2022 curial reform. Author of the documents both chronologies pivot on — Libertatis Nuntius (1984) and Libertatis Conscientia (1986), the Boff and Sobrino notifications, and the 2026 SSPX decree.",
+      "projects": ["fsspx", "tl"],
+      "related": ["notification"],
+      "sources": ["wikipedia-ddf"]
+    },
+    {
+      "id": "notification",
+      "term": "Notification (CDF)",
+      "definition": "A public doctrinal caution issued by the CDF/DDF about specific works or propositions of an author — less than a condemnation of the person. Leonardo Boff (1985) received a Notification followed by an imposed silence; Jon Sobrino (2006/07) a Notification without silencing; Gustavo Gutiérrez was scrutinized but never sanctioned. The differences matter: 'the Vatican condemned liberation theology' flattens three distinct outcomes.",
+      "projects": ["tl"],
+      "related": ["cdf-ddf"],
+      "sources": ["notif-boff", "notif-sobrino"]
+    },
+    {
+      "id": "cebs",
+      "term": "CEBs (comunidades eclesiais de base)",
+      "definition": "Grassroots 'base ecclesial communities' — small neighborhood groups reading the Gospel in connection with daily life — strongest in Brazil, where they carried liberation theology's pastoral practice and, per attributed accounts, fed cadres into the Workers' Party in the 1980s. Estimates of their peak numbers vary widely between sources.",
+      "projects": ["tl", "fsp"],
+      "related": ["preferential-option"],
+      "sources": ["wikipedia-tl-pt"]
+    },
+    {
+      "id": "preferential-option",
+      "term": "Preferential option for the poor",
+      "definition": "The formula at the heart of Latin American liberation theology, consolidated by the CELAM conferences of Medellín (1968) and Puebla (1979) and since absorbed into papal teaching. Its interpretation — pastoral priority vs political program — is precisely what the 1980s disputes were about.",
+      "projects": ["tl"],
+      "related": ["cebs", "praxis"],
+      "sources": ["puebla-doc"]
+    },
+    {
+      "id": "praxis",
+      "term": "Praxis",
+      "definition": "Liberation theology's methodological keyword: theology as 'critical reflection on praxis' (Gutiérrez) — starting from concrete practice among the poor rather than from doctrine applied downward. The 1984 Instruction's critique targeted versions of this method it judged to import Marxist analysis uncritically.",
+      "projects": ["tl"],
+      "related": ["preferential-option"],
+      "sources": ["libertatis-nuntius"]
+    },
+    {
+      "id": "teologia-del-pueblo",
+      "term": "Teología del pueblo",
+      "definition": "The Argentine 'theology of the people': a current born from the same post-conciliar ferment as liberation theology but centered on popular culture and religiosity rather than class analysis. It formed Jorge Bergoglio — which is why readings of Pope Francis as a 'liberation theologian' are contested; the Cronologia sites keep the labels apart.",
+      "projects": ["tl"],
+      "related": ["praxis", "preferential-option"],
+      "sources": ["wikipedia-teologia-pueblo"]
+    },
+    {
+      "id": "tariqa",
+      "term": "Tariqa (and the Maryamiyya)",
+      "definition": "A Sufi order — a Muslim initiatic brotherhood under a shaykh. The Maryamiyya is the tariqa founded by the perennialist Frithjof Schuon; the documented membership of Rama Coomaraswamy — sedevacantist author and sometime professor at the SSPX's US seminary — is the reason a Sufi term appears in a Catholic-traditionalism glossary.",
+      "projects": ["fsspx"],
+      "related": ["sedevacantism"],
+      "sources": ["wikipedia-maryamiyya"]
+    }
+  ],
+  "references": [
+    { "id": "cic-1983", "title": "Code of Canon Law (1983)", "url": "https://www.vatican.va/archive/cod-iuris-canonici/cic_index_en.html", "publisher": "Holy See (vatican.va)", "type": "primary" },
+    { "id": "ecclesia-dei-1988", "title": "Ecclesia Dei — Apostolic Letter of John Paul II (2 July 1988)", "url": "https://www.vatican.va/content/john-paul-ii/en/motu_proprio/documents/hf_jp-ii_motu-proprio_02071988_ecclesia-dei.html", "publisher": "Holy See (vatican.va)", "type": "primary" },
+    { "id": "benedict-2009-letter", "title": "Letter of Benedict XVI to the Bishops on the remission of the excommunication (10 March 2009)", "url": "https://www.vatican.va/content/benedict-xvi/en/letters/2009/documents/hf_ben-xvi_let_20090310_remissione-scomunica.html", "publisher": "Holy See (vatican.va)", "type": "primary" },
+    { "id": "libertatis-nuntius", "title": "Libertatis Nuntius (CDF, 6 August 1984)", "url": "https://www.vatican.va/roman_curia/congregations/cfaith/documents/rc_con_cfaith_doc_19840806_theology-liberation_en.html", "publisher": "Holy See (vatican.va)", "type": "primary" },
+    { "id": "notif-boff", "title": "Notification on 'Church: Charism and Power' by Fr. Leonardo Boff (CDF, 1985)", "url": "https://www.vatican.va/roman_curia/congregations/cfaith/documents/rc_con_cfaith_doc_19850311_notif-boff_en.html", "publisher": "Holy See (vatican.va)", "type": "primary" },
+    { "id": "notif-sobrino", "title": "Notification on the works of Fr. Jon Sobrino, SJ (CDF, 2006)", "url": "https://www.vatican.va/roman_curia/congregations/cfaith/documents/rc_con_cfaith_doc_20061126_notification-sobrino_en.html", "publisher": "Holy See (vatican.va)", "type": "primary" },
+    { "id": "puebla-doc", "title": "Documento Conclusivo de Puebla (CELAM, 1979)", "url": "https://www.celam.org/doc_conferencias/Documento_Conclusivo_Puebla.pdf", "publisher": "CELAM", "type": "primary" },
+    { "id": "vatican-news-cardenal", "title": "Pope Francis lifts suspension on Fr. Ernesto Cardenal (2019)", "url": "https://www.vaticannews.va/en/pope/news/2019-02/pope-francis-lifts-sanctions-ernesto-cardenal.html", "publisher": "Vatican News", "type": "official-site" },
+    { "id": "wikipedia-sspx", "title": "Society of Saint Pius X", "url": "https://en.wikipedia.org/wiki/Society_of_Saint_Pius_X", "publisher": "Wikipedia (EN)", "type": "encyclopedia" },
+    { "id": "wikipedia-sedevacantism", "title": "Sedevacantism", "url": "https://en.wikipedia.org/wiki/Sedevacantism", "publisher": "Wikipedia (EN)", "type": "encyclopedia" },
+    { "id": "wikipedia-sedeprivationism", "title": "Sedeprivationism", "url": "https://en.wikipedia.org/wiki/Sedeprivationism", "publisher": "Wikipedia (EN)", "type": "encyclopedia" },
+    { "id": "wikipedia-palmarian", "title": "Palmarian Catholic Church", "url": "https://en.wikipedia.org/wiki/Palmarian_Catholic_Church", "publisher": "Wikipedia (EN)", "type": "encyclopedia" },
+    { "id": "wikipedia-motu-proprio", "title": "Motu proprio", "url": "https://en.wikipedia.org/wiki/Motu_proprio", "publisher": "Wikipedia (EN)", "type": "encyclopedia" },
+    { "id": "wikipedia-ddf", "title": "Dicastery for the Doctrine of the Faith", "url": "https://en.wikipedia.org/wiki/Dicastery_for_the_Doctrine_of_the_Faith", "publisher": "Wikipedia (EN)", "type": "encyclopedia" },
+    { "id": "wikipedia-tl-pt", "title": "Teologia da libertação", "url": "https://pt.wikipedia.org/wiki/Teologia_da_liberta%C3%A7%C3%A3o", "publisher": "Wikipedia (PT)", "type": "encyclopedia" },
+    { "id": "wikipedia-teologia-pueblo", "title": "Theology of the People", "url": "https://en.wikipedia.org/wiki/Theology_of_the_People", "publisher": "Wikipedia (EN)", "type": "encyclopedia" },
+    { "id": "wikipedia-maryamiyya", "title": "Maryamiyya Order", "url": "https://en.wikipedia.org/wiki/Maryamiyya_Order", "publisher": "Wikipedia (EN)", "type": "encyclopedia" }
+  ]
+}
