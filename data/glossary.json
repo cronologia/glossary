@@ -4,7 +4,7 @@
     "subtitle": "Cited definitions of contested terms",
     "description": "The shared glossary of the Cronologia projects: short, source-referenced definitions of the canonical, theological and political vocabulary the chronologies rely on — one stable anchor per term, so project pages link instead of re-explaining.",
     "language": "en",
-    "lastUpdated": "2026-07-19",
+    "lastUpdated": "2026-07-20",
     "dataQualityNote": "Definitions only, each cited like any other fact in the Cronologia family. Arguments about these terms stay in the projects' own disambiguation sections, which link here. Corrections against primary sources are welcome."
   },
   "terms": [
@@ -111,7 +111,7 @@
       "term": "CEBs (comunidades eclesiais de base)",
       "definition": "Grassroots 'base ecclesial communities' — small neighborhood groups reading the Gospel in connection with daily life — strongest in Brazil, where they carried liberation theology's pastoral practice and, per attributed accounts, fed cadres into the Workers' Party in the 1980s. Estimates of their peak numbers vary widely between sources.",
       "projects": ["tl", "fsp"],
-      "related": ["preferential-option"],
+      "related": ["preferential-option", "cnbb"],
       "sources": ["wikipedia-tl-pt"]
     },
     {
@@ -139,12 +139,165 @@
       "sources": ["wikipedia-teologia-pueblo"]
     },
     {
+      "id": "integrismo",
+      "term": "Integrismo (integrism)",
+      "variants": "intégrisme, integrism; distinct from the Brazilian integralismo of the 1930s",
+      "definition": "A label from Catholicism's anti-modernist era: after Pius X's 1907 condemnation of modernism, the militants of 'integral Catholicism' — the position that the Catholic faith should be the basis of public law and public policy, against pluralism and church–state separation — came to be called integristes/integristas; the word had earlier named a Spanish Catholic party of the 1890s. In current French, Spanish and Portuguese use it is largely pejorative: per the Portuguese Wikipedia, a label 'employed by political adversaries to describe groups and individuals who actually self-identify differently, such as traditionalists' — which is how it circulates around the TFP and SSPX milieus. An attributed label, not a self-description; and not to be confused with the Brazilian integralismo (Ação Integralista Brasileira, 1932–37), a separate political movement.",
+      "projects": ["tfp", "fsspx"],
+      "related": ["contra-revolucao", "traditionalist-school"],
+      "sources": ["wikipedia-integrism", "wikipedia-integrismo-pt"]
+    },
+    {
+      "id": "contra-revolucao",
+      "term": "Contra-Revolução (Counter-Revolution)",
+      "variants": "capitalized technical term of Plinio Corrêa de Oliveira, 'Revolução e Contra-Revolução' (1959)",
+      "definition": "Plinio Corrêa de Oliveira's technical term, defined in the essay Revolução e Contra-Revolução (first published in Catolicismo no. 100, April 1959), which the TFP movement treats as its foundational text. In the essay's own definitions, 'the Revolution' is a centuries-long process destroying Christian civilization through three great revolutions — the 'Pseudo-Reformation', the French Revolution and Communism — driven by pride and sensuality; the Counter-Revolution is literally 're-action', the struggle to crush that process: 'if the Revolution is disorder, the Counter-Revolution is the restoration of order', order meaning 'the peace of Christ in the reign of Christ — that is, Christian civilization, austere and hierarchical, fundamentally sacral, anti-egalitarian and anti-liberal'. An attributed definition: the glossary reports the author's usage; assessments of the program stay in the tfp project.",
+      "projects": ["tfp"],
+      "related": ["integrismo"],
+      "sources": ["rcr-1959", "wikipedia-tfp"]
+    },
+    {
+      "id": "encontro-encuentro",
+      "term": "Encontro / Encuentro",
+      "variants": "'meeting' (Portuguese/Spanish); capitalized, the numbered meeting series of the Foro de São Paulo and of the Grupo de Puebla",
+      "definition": "Ordinary words for 'meeting' that double as proper names of two different numbered series. The gatherings of the Foro de São Paulo are counted as Encontros/Encuentros — 27 between São Paulo 1990 and 2024, e.g. the XVIII Encuentro (Caracas, 2012). The Grupo de Puebla counts its own Encuentros from the founding Encuentro Latinoamericano ProgresivaMente (Puebla, Mexico, July 2019) — ten by mid-2024. A bare 'X Encontro' or 'Encuentro' citation is therefore ambiguous between two organizations founded 29 years apart; the chronologies always name the series.",
+      "projects": ["fsp", "grupopuebla"],
+      "related": ["foro-vs-grupo"],
+      "sources": ["wikipedia-fsp-pt", "wikipedia-fsp-en", "wikipedia-grupo-puebla"]
+    },
+    {
+      "id": "foro-vs-grupo",
+      "term": "Foro vs Grupo (São Paulo / Puebla)",
+      "variants": "Foro de São Paulo (1990) vs Grupo de Puebla (2019)",
+      "definition": "The distinction between the two Latin-American left coordination bodies most often conflated. The Foro de São Paulo, constituted in 1990 when Brazil's Workers' Party convened left parties of Latin America and the Caribbean to debate the scenario after the fall of the Berlin Wall (48 parties and organizations at the first São Paulo meeting; the name adopted from the 1991 Mexico City meeting), is a conference of parties and organizations. The Grupo de Puebla, founded in Puebla, Mexico, in July 2019, is a forum of individual leaders of the Latin American and southern-European left — former presidents such as Mujica, Rousseff, Samper, Correa and Zapatero among its members — with organs including the juridical council CLAJUD. Party membership versus personal membership is the load-bearing difference: a claim about one body does not transfer to the other.",
+      "projects": ["fsp", "grupopuebla"],
+      "related": ["encontro-encuentro"],
+      "sources": ["wikipedia-fsp-en", "wikipedia-grupo-puebla"]
+    },
+    {
+      "id": "carisma",
+      "term": "Carisma (charism, RCC usage)",
+      "variants": "charism, charismata; carismas",
+      "definition": "In the vocabulary of the Catholic Charismatic Renewal, the gifts of the Holy Spirit enumerated in 1 Corinthians 12:8–10 — wisdom, knowledge, faith, healing, miracles, prophecy, discernment of spirits, tongues and their interpretation — understood by the movement as given for exercise in the Church today. The stated purpose of CHARIS, the service body erected for the Renewal by the Dicastery for Laity, Family and Life (decree of 8 December 2018), includes promoting 'the exercise of charisms' not only in the Renewal but in the whole Church. This entry reports the movement's and the dicastery's own usage.",
+      "projects": ["rcc"],
+      "related": ["batismo-no-espirito"],
+      "sources": ["wikipedia-ccr", "dlfl-charis"]
+    },
+    {
+      "id": "batismo-no-espirito",
+      "term": "Batismo no Espírito Santo (baptism in the Spirit)",
+      "variants": "baptism in the Holy Spirit; efusão do Espírito",
+      "definition": "The Catholic Charismatic Renewal's central experience term, dated by the movement to Duquesne University in February 1967: 'an individual receiving a personal experience of the power of God, as the Apostles did at Pentecost' — an experience distinct from the sacrament of baptism, not a rebaptism. The theologians the movement cites (McDonnell and Montague) frame it as 'integral to Christian initiation' and 'not special grace for some but common grace for all'; the first stated objective of CHARIS, the body the Dicastery for Laity, Family and Life erected in 2018, is 'to help deepen and promote the grace of baptism in the Holy Spirit throughout the Church'. Attributed to the movement's and the dicastery's own wording; assessments of the practice stay in the rcc project.",
+      "projects": ["rcc"],
+      "related": ["carisma"],
+      "sources": ["wikipedia-ccr", "dlfl-charis"]
+    },
+    {
+      "id": "cnbb",
+      "term": "CNBB",
+      "variants": "Conferência Nacional dos Bispos do Brasil (National Conference of Bishops of Brazil)",
+      "definition": "Brazil's episcopal conference, grouping all the country's Catholic bishops: founded 14 October 1952 in Rio de Janeiro — with Msgr. Montini, the future Paul VI, urging its creation, and Hélder Câmara, one of its main organizers, as first secretary-general — and headquartered in Brasília since 1977. All diocesan bishops belong, alongside coadjutors, auxiliaries and certain titular bishops, organized in pastoral commissions and regional councils. In the Cronologia projects it is the recurring institutional actor wherever 'the Brazilian bishops' act collectively.",
+      "projects": ["tl", "fsp", "rcc"],
+      "related": ["cebs"],
+      "sources": ["wikipedia-cnbb", "cnbb-site"]
+    },
+    {
+      "id": "nunciature",
+      "term": "Nunciature (apostolic)",
+      "variants": "apostolic nunciature; nuncio, papal nuncio",
+      "definition": "The highest-level diplomatic mission of the Holy See in a country, functioning like an embassy. Its head, the apostolic nuncio, holds the rank of ambassador extraordinary and plenipotentiary, is usually a titular archbishop, and in many countries serves ex officio as dean of the diplomatic corps. The nuncio is at the same time the official liaison between the Holy See and the local Catholic church, with significant involvement in the selection of bishops — the double function (state diplomacy plus internal church reporting) that makes nunciatures recur in the chronologies wherever episcopal appointments or Roman interventions are contested.",
+      "projects": ["fsspx", "tl"],
+      "related": [],
+      "sources": ["wikipedia-nunciature"]
+    },
+    {
+      "id": "prelature",
+      "term": "Prelature (territorial / personal)",
+      "variants": "prelazia; personal prelature (cann. 294–297)",
+      "definition": "A church jurisdiction headed by a prelate. A territorial prelature governs a geographic area, like a diocese; a personal prelature — conceived at Vatican II (Presbyterorum ordinis 10), given legal form by Paul VI's Ecclesiae sanctae and codified in canons 294–297 of the 1983 Code — ministers to persons according to a pastoral task, regardless of where they live. Opus Dei, erected by John Paul II in 1982 (apostolic constitution Ut sit), is so far the only personal prelature; a personal prelature is also the canonical restructuring Rome has offered the SSPX in regularization discussions — the reason the term is load-bearing in the fsspx chronology. As with every canonical status in these projects: date the statement.",
+      "projects": ["fsspx"],
+      "related": ["canonical-irregularity", "pia-unio"],
+      "sources": ["wikipedia-personal-prelature"]
+    },
+    {
       "id": "tariqa",
       "term": "Tariqa (and the Maryamiyya)",
       "definition": "A Sufi order — a Muslim initiatic brotherhood under a shaykh. The Maryamiyya is the tariqa founded by the perennialist Frithjof Schuon; the documented membership of Rama Coomaraswamy — sedevacantist author and sometime professor at the SSPX's US seminary — is the reason a Sufi term appears in a Catholic-traditionalism glossary.",
-      "projects": ["fsspx"],
-      "related": ["sedevacantism"],
+      "projects": ["fsspx", "tariqa"],
+      "related": ["sedevacantism", "silsila", "bayah", "traditionalist-school"],
       "sources": ["wikipedia-maryamiyya"]
+    },
+    {
+      "id": "silsila",
+      "term": "Silsila",
+      "variants": "silsilah; initiatic chain, spiritual genealogy",
+      "definition": "The chain of spiritual transmission ('chain, lineage' in Arabic) through which a Sufi order traces the authority of its living shaykh back, master to master, to the Prophet Muhammad — most orders route the chain through Ali, the Naqshbandiyya through Abu Bakr. The silsila functions as a shaykh's credential and source of legitimacy: initiation counts because the initiator himself stands in an unbroken chain. The full style of Schuon's order — Tariqa Shadhiliyya-Darqawiyya-Alawiyya-Maryamiyya — is a silsila compressed into a name.",
+      "projects": ["tariqa"],
+      "related": ["tariqa", "khalifa", "bayah"],
+      "sources": ["wikipedia-silsila", "britannica-tariqa", "wikipedia-maryamiyya"]
+    },
+    {
+      "id": "muqaddam",
+      "term": "Muqaddam",
+      "variants": "an Arabic title also used for civil and military officials; in Sufism, the shaykh's authorized representative",
+      "definition": "In Sufi orders, a disciple (murid) whom the guide — shaykh, pir or murshid — has authorized to assist in teaching the path to other students: a delegated local representative of the master, a usage found in the Tijaniyya, Shadhiliyya, Rahmaniyya and related orders. Outside Sufism the same title has named village intermediaries in medieval India and an officer rank in modern Arab armies. The term recurs in the tariqa project's connection threads, which document who held a muqaddam's authorization, where and when.",
+      "projects": ["tariqa"],
+      "related": ["tariqa", "khalifa"],
+      "sources": ["wikipedia-muqaddam"]
+    },
+    {
+      "id": "khalifa",
+      "term": "Khalifa (Sufi usage)",
+      "variants": "khalīfa, 'successor, deputy'; khilafat (the office conferred); cf. caliph",
+      "definition": "Literally 'successor' or 'deputy' — the word behind 'caliph', the successor of Muhammad at the head of the Muslim community. In Sufi usage it is the disciple a shaykh designates as his deputy or successor: in most cases the shaykh nominates his khalifa during his own lifetime, and the transfer of this khilafat from master to spiritual descendant is what a silsila records link by link. Whether a given khilafat was in fact conferred is often disputed in order histories; the project pages date and attribute such claims.",
+      "projects": ["tariqa"],
+      "related": ["silsila", "muqaddam", "tariqa"],
+      "sources": ["wikipedia-khalifa", "wikipedia-tariqa", "wikipedia-silsila"]
+    },
+    {
+      "id": "zawiya",
+      "term": "Zawiya",
+      "variants": "zāwiya, zaouia; cf. khanqah, tekke",
+      "definition": "A Sufi lodge ('corner, nook' in Arabic): the building or complex where an order teaches, houses travelers and holds its dhikr — functioning variously as oratory, school, hostel and shrine, often around a founder's tomb. It is the usual term in North and West Africa; the Persianate world uses khanqah and the Ottoman-Turkish world tekke for the functionally similar institution.",
+      "projects": ["tariqa"],
+      "related": ["tariqa", "dhikr"],
+      "sources": ["wikipedia-zawiya", "britannica-tariqa"]
+    },
+    {
+      "id": "dhikr",
+      "term": "Dhikr",
+      "variants": "zikr; 'remembrance' of God",
+      "definition": "The practice of remembering God by repeating his names or set formulas ('there is no god but God', 'glory be to God'), aloud or silently, alone or in assembly, often counted on beads. Each Sufi order transmits its own dhikr with prescribed posture and breathing, and the collective dhikr session is the characteristic ritual of tariqa life — described by Sufis as a method, alongside meditation (fikr), of striving toward oneness with God.",
+      "projects": ["tariqa"],
+      "related": ["tariqa", "zawiya"],
+      "sources": ["wikipedia-dhikr", "britannica-dhikr"]
+    },
+    {
+      "id": "bayah",
+      "term": "Bay'ah",
+      "variants": "baya, bay'at; oath of allegiance, Sufi initiation pledge",
+      "definition": "The Islamic oath of allegiance — from a commercial root, originally the handclasp sealing a bargain — historically given to caliphs and still given to monarchs in Morocco and Saudi Arabia. In Sufism it is the rite of initiation: the seeker's pledge of allegiance to the shaykh of a tariqa, which creates the master–disciple bond and grafts the newcomer onto the order's silsila. In the Cronologia projects, saying someone 'took bay'ah' is therefore a membership claim — initiation, not mere sympathy — and enters a dataset only with self-disclosure or scholarship behind it.",
+      "projects": ["tariqa"],
+      "related": ["tariqa", "silsila"],
+      "sources": ["wikipedia-bayah"]
+    },
+    {
+      "id": "philosophia-perennis",
+      "term": "Philosophia perennis",
+      "variants": "perennial philosophy; perennialism",
+      "definition": "A Latin phrase with four distinct careers, kept apart in the perennialism project's disambiguation. (1) Agostino Steuco coined it (De perenni philosophia, 1540) for the thesis that one God-given wisdom, revealed at the beginning, persists through the ancient philosophers into Christianity. (2) Leibniz took the term over — the first philosopher to use it without crediting Steuco — recasting the primordial truths as seeds to be developed by philosophical progress. (3) Aldous Huxley's The Perennial Philosophy (1945) made it the name of an experiential mystical universalism: a divine Reality accessible in mystical experience across all religions. (4) The Traditionalist School of Guénon and Schuon holds a metaphysical version — a single primordial tradition transmitted only through the orthodox revealed religions — and rejected Huxley-style syncretism. Same phrase, four lineages: a statement about 'perennialism' must say which one it means.",
+      "projects": ["perennialism"],
+      "related": ["traditionalist-school"],
+      "sources": ["wikipedia-perennial-philosophy", "lexicon-steuco", "wikipedia-traditionalist-school"]
+    },
+    {
+      "id": "traditionalist-school",
+      "term": "Traditionalist School",
+      "variants": "Guénonian Traditionalism; cf. Catholic traditionalism, Evolian 'Traditionalism'",
+      "definition": "The school of thought stemming from René Guénon, Ananda Coomaraswamy and Frithjof Schuon: perennialism in its metaphysical form — one primordial truth underlying the major world religions in their orthodox forms — joined, in Mark Sedgwick's summary, to the conviction that history is decline rather than progress. Capitalized, the label names this movement only. It is distinct in origin from Catholic traditionalism (attachment to the pre-Vatican II Mass and doctrine — the fsspx project's subject), and distinct again from Julius Evola's politicized 'Traditionalism', the reading later invoked in radical-right politics, whose compatibility with the school scholars dispute. Three different 'traditionalisms': the project pages disambiguate on sight and document the individual bridges between them case by case.",
+      "projects": ["perennialism", "tariqa", "fsspx"],
+      "related": ["philosophia-perennis", "tariqa"],
+      "sources": ["wikipedia-traditionalist-school", "sedgwick-traditionalism-2023"]
     }
   ],
   "references": [
@@ -164,6 +317,32 @@
     { "id": "wikipedia-ddf", "title": "Dicastery for the Doctrine of the Faith", "url": "https://en.wikipedia.org/wiki/Dicastery_for_the_Doctrine_of_the_Faith", "publisher": "Wikipedia (EN)", "type": "encyclopedia" },
     { "id": "wikipedia-tl-pt", "title": "Teologia da libertação", "url": "https://pt.wikipedia.org/wiki/Teologia_da_liberta%C3%A7%C3%A3o", "publisher": "Wikipedia (PT)", "type": "encyclopedia" },
     { "id": "wikipedia-teologia-pueblo", "title": "Theology of the People", "url": "https://en.wikipedia.org/wiki/Theology_of_the_People", "publisher": "Wikipedia (EN)", "type": "encyclopedia" },
-    { "id": "wikipedia-maryamiyya", "title": "Maryamiyya Order", "url": "https://en.wikipedia.org/wiki/Maryamiyya_Order", "publisher": "Wikipedia (EN)", "type": "encyclopedia" }
+    { "id": "wikipedia-maryamiyya", "title": "Maryamiyya Order", "url": "https://en.wikipedia.org/wiki/Maryamiyya_Order", "publisher": "Wikipedia (EN)", "type": "encyclopedia" },
+    { "id": "wikipedia-silsila", "title": "Silsila", "url": "https://en.wikipedia.org/wiki/Silsila", "publisher": "Wikipedia (EN)", "type": "encyclopedia" },
+    { "id": "wikipedia-muqaddam", "title": "Muqaddam", "url": "https://en.wikipedia.org/wiki/Muqaddam", "publisher": "Wikipedia (EN)", "type": "encyclopedia" },
+    { "id": "wikipedia-khalifa", "title": "Khalifa", "url": "https://en.wikipedia.org/wiki/Khalifa", "publisher": "Wikipedia (EN)", "type": "encyclopedia" },
+    { "id": "wikipedia-tariqa", "title": "Tariqa", "url": "https://en.wikipedia.org/wiki/Tariqa", "publisher": "Wikipedia (EN)", "type": "encyclopedia" },
+    { "id": "britannica-tariqa", "title": "Tariqa (ṭarīqah) — Islamic mysticism", "url": "https://www.britannica.com/topic/tariqa", "publisher": "Encyclopaedia Britannica", "type": "encyclopedia" },
+    { "id": "wikipedia-zawiya", "title": "Zawiya (institution)", "url": "https://en.wikipedia.org/wiki/Zawiya_(institution)", "publisher": "Wikipedia (EN)", "type": "encyclopedia" },
+    { "id": "wikipedia-dhikr", "title": "Dhikr", "url": "https://en.wikipedia.org/wiki/Dhikr", "publisher": "Wikipedia (EN)", "type": "encyclopedia" },
+    { "id": "britannica-dhikr", "title": "Dhikr — Islamic ritual prayer", "url": "https://www.britannica.com/topic/dhikr", "publisher": "Encyclopaedia Britannica", "type": "encyclopedia" },
+    { "id": "wikipedia-bayah", "title": "Bay'ah", "url": "https://en.wikipedia.org/wiki/Bay%27ah", "publisher": "Wikipedia (EN)", "type": "encyclopedia" },
+    { "id": "wikipedia-perennial-philosophy", "title": "Perennial philosophy", "url": "https://en.wikipedia.org/wiki/Perennial_philosophy", "publisher": "Wikipedia (EN)", "type": "encyclopedia" },
+    { "id": "lexicon-steuco", "title": "Hannes Amberger, 'Revelation and Progress: The Concept of philosophia perennis from Steuco to Leibniz' (Lexicon Philosophicum)", "url": "https://lexicon.cnr.it/ojs/index.php/LP/article/view/655", "publisher": "CNR — Lexicon Philosophicum", "type": "academic" },
+    { "id": "wikipedia-traditionalist-school", "title": "Traditionalist School (perennialism)", "url": "https://en.wikipedia.org/wiki/Traditionalist_School_(perennialism)", "publisher": "Wikipedia (EN)", "type": "encyclopedia" },
+    { "id": "sedgwick-traditionalism-2023", "title": "Mark Sedgwick, 'Traditionalism: The Radical Project for Restoring Sacred Order' (2023)", "url": "https://global.oup.com/academic/product/traditionalism-9780197683767", "publisher": "Oxford University Press", "type": "academic" },
+    { "id": "wikipedia-integrism", "title": "Integrism (Catholic integralism)", "url": "https://en.wikipedia.org/wiki/Integrism", "publisher": "Wikipedia (EN)", "type": "encyclopedia" },
+    { "id": "wikipedia-integrismo-pt", "title": "Integrismo", "url": "https://pt.wikipedia.org/wiki/Integrismo", "publisher": "Wikipedia (PT)", "type": "encyclopedia" },
+    { "id": "rcr-1959", "title": "Plinio Corrêa de Oliveira, 'Revolução e Contra-Revolução' (Catolicismo n. 100, April 1959)", "url": "https://www.pliniocorreadeoliveira.info/rcr.pdf", "publisher": "pliniocorreadeoliveira.info — movement-affiliated archive of the author's works", "type": "primary" },
+    { "id": "wikipedia-tfp", "title": "Tradition, Family, Property", "url": "https://en.wikipedia.org/wiki/Tradition,_Family,_Property", "publisher": "Wikipedia (EN)", "type": "encyclopedia" },
+    { "id": "wikipedia-fsp-en", "title": "Foro de São Paulo", "url": "https://en.wikipedia.org/wiki/Foro_de_S%C3%A3o_Paulo", "publisher": "Wikipedia (EN)", "type": "encyclopedia" },
+    { "id": "wikipedia-fsp-pt", "title": "Foro de São Paulo", "url": "https://pt.wikipedia.org/wiki/Foro_de_S%C3%A3o_Paulo", "publisher": "Wikipedia (PT)", "type": "encyclopedia" },
+    { "id": "wikipedia-grupo-puebla", "title": "Grupo de Puebla", "url": "https://es.wikipedia.org/wiki/Grupo_de_Puebla", "publisher": "Wikipedia (ES)", "type": "encyclopedia" },
+    { "id": "wikipedia-ccr", "title": "Catholic Charismatic Renewal", "url": "https://en.wikipedia.org/wiki/Catholic_Charismatic_Renewal", "publisher": "Wikipedia (EN)", "type": "encyclopedia" },
+    { "id": "dlfl-charis", "title": "CHARIS — Catholic Charismatic Renewal International Service (repertory of associations)", "url": "https://www.laityfamilylife.va/content/laityfamilylife/en/associazioni-e-movimenti/repertorio/charis.html", "publisher": "Dicastery for Laity, Family and Life (laityfamilylife.va)", "type": "primary" },
+    { "id": "wikipedia-cnbb", "title": "National Conference of Bishops of Brazil", "url": "https://en.wikipedia.org/wiki/National_Conference_of_Bishops_of_Brazil", "publisher": "Wikipedia (EN)", "type": "encyclopedia" },
+    { "id": "cnbb-site", "title": "CNBB — Conferência Nacional dos Bispos do Brasil (official site)", "url": "https://www.cnbb.org.br/", "publisher": "CNBB", "type": "official-site" },
+    { "id": "wikipedia-nunciature", "title": "Apostolic nunciature", "url": "https://en.wikipedia.org/wiki/Apostolic_nunciature", "publisher": "Wikipedia (EN)", "type": "encyclopedia" },
+    { "id": "wikipedia-personal-prelature", "title": "Personal prelature", "url": "https://en.wikipedia.org/wiki/Personal_prelature", "publisher": "Wikipedia (EN)", "type": "encyclopedia" }
   ]
 }
