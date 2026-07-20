@@ -32,8 +32,11 @@ const ANALYTICS = `  <!-- Google tag (gtag.js) -->
 const PROJECTS = {
   fsp: { name: 'fsp', url: 'https://cronologia.github.io/fsp/' },
   fsspx: { name: 'fsspx', url: 'https://cronologia.github.io/fsspx/' },
+  grupopuebla: { name: 'grupopuebla', url: 'https://cronologia.github.io/grupopuebla/' },
   perennialism: { name: 'perennialism', url: 'https://cronologia.github.io/perennialism/' },
+  rcc: { name: 'rcc', url: 'https://cronologia.github.io/rcc/' },
   tariqa: { name: 'tariqa', url: 'https://cronologia.github.io/tariqa/' },
+  tfp: { name: 'tfp', url: 'https://cronologia.github.io/tfp/' },
   tl: { name: 'tl', url: 'https://cronologia.github.io/tl/' },
 };
 
