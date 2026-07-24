@@ -15,6 +15,7 @@ const path = require('path');
 
 const ROOT = __dirname;
 const DATA_FILE = path.join(ROOT, 'data', 'glossary.json');
+const ARCHIVES_FILE = path.join(ROOT, 'data', 'archives.json');
 const SRC_DIR = path.join(ROOT, 'src');
 const OUT_DIR = path.join(ROOT, 'docs');
 
@@ -50,6 +51,38 @@ function esc(value) {
     .replace(/'/g, '&#39;');
 }
 
+/** Format a 14-digit Wayback timestamp (YYYYMMDDhhmmss) as YYYY-MM-DD. */
+function formatArchiveTs(ts) {
+  if (!ts || String(ts).length < 8) return '';
+  const s = String(ts);
+  return `${s.slice(0, 4)}-${s.slice(4, 6)}-${s.slice(6, 8)}`;
+}
+
+/**
+ * Load the machine-generated Wayback snapshot cache (url -> snapshot) written
+ * by scripts/archive-refs.js. Returns {} when data/archives.json is absent, so
+ * the build stays network-free and works before the archiver has ever run.
+ */
+function loadArchives() {
+  try {
+    const parsed = JSON.parse(fs.readFileSync(ARCHIVES_FILE, 'utf8'));
+    return (parsed && parsed.snapshots) || {};
+  } catch {
+    return {};
+  }
+}
+
+/**
+ * Render the "archived" fallback link for a reference URL, or '' when no
+ * snapshot is recorded. Appended after the reference's publisher/type metadata.
+ */
+function archivedLink(url, archives) {
+  const snap = archives && archives[url];
+  if (!snap || !snap.archiveUrl) return '';
+  const ts = snap.timestamp ? ` ${esc(formatArchiveTs(snap.timestamp))}` : '';
+  return ` · <a class="archive-link" href="${esc(snap.archiveUrl)}" rel="noopener noreferrer" target="_blank">archived${ts}</a>`;
+}
+
 function renderCites(sources, refNumById) {
   if (!Array.isArray(sources) || sources.length === 0) return '';
   const marks = sources
@@ -83,7 +116,7 @@ function renderTerm(t, refNumById, termById) {
  * so other Cronologia pages can reference a stable per-term URL
  * (e.g. /glossary/latae-sententiae/). The index page's #anchors keep working.
  */
-function renderTermPage(t, data, termById) {
+function renderTermPage(t, data, termById, archives = loadArchives()) {
   const { meta, references } = data;
   const used = (t.sources || []).map((id) => references.find((r) => r.id === id)).filter(Boolean);
   const localNum = new Map(used.map((r, i) => [r.id, i + 1]));
@@ -121,7 +154,7 @@ ${ANALYTICS}
     <section id="references">
       <h2>Sources</h2>
       <ol class="references">
-${used.map((r, i) => `        <li id="ref-${i + 1}"><a href="${esc(r.url)}" rel="noopener noreferrer" target="_blank">${esc(r.title)}</a><span class="ref-meta">${esc(r.publisher)} · ${esc(r.type)}</span></li>`).join('\n')}
+${used.map((r, i) => `        <li id="ref-${i + 1}"><a href="${esc(r.url)}" rel="noopener noreferrer" target="_blank">${esc(r.title)}</a><span class="ref-meta">${esc(r.publisher)} · ${esc(r.type)}${archivedLink(r.url, archives)}</span></li>`).join('\n')}
       </ol>
     </section>
   </main>
@@ -133,7 +166,7 @@ ${used.map((r, i) => `        <li id="ref-${i + 1}"><a href="${esc(r.url)}" rel=
 `;
 }
 
-function renderPage(data) {
+function renderPage(data, archives = loadArchives()) {
   const { meta, terms, references } = data;
   const refNumById = new Map(references.map((r, i) => [r.id, i + 1]));
   const sorted = [...terms].sort((a, b) => a.term.localeCompare(b.term, 'en', { sensitivity: 'base' }));
@@ -173,7 +206,7 @@ ${sorted.map((t) => renderTerm(t, refNumById, termById)).join('\n')}
     <section id="references">
       <h2>References</h2>
       <ol class="references">
-${references.map((r, i) => `        <li id="ref-${i + 1}"><a href="${esc(r.url)}" rel="noopener noreferrer" target="_blank">${esc(r.title)}</a><span class="ref-meta">${esc(r.publisher)} · ${esc(r.type)}</span></li>`).join('\n')}
+${references.map((r, i) => `        <li id="ref-${i + 1}"><a href="${esc(r.url)}" rel="noopener noreferrer" target="_blank">${esc(r.title)}</a><span class="ref-meta">${esc(r.publisher)} · ${esc(r.type)}${archivedLink(r.url, archives)}</span></li>`).join('\n')}
       </ol>
     </section>
   </main>
@@ -190,19 +223,21 @@ ${references.map((r, i) => `        <li id="ref-${i + 1}"><a href="${esc(r.url)}
 
 function main() {
   const data = JSON.parse(fs.readFileSync(DATA_FILE, 'utf8'));
+  const archives = loadArchives();
   fs.mkdirSync(OUT_DIR, { recursive: true });
-  fs.writeFileSync(path.join(OUT_DIR, 'index.html'), renderPage(data));
+  fs.writeFileSync(path.join(OUT_DIR, 'index.html'), renderPage(data, archives));
   const termById = new Map(data.terms.map((t) => [t.id, t]));
   for (const t of data.terms) {
     const dir = path.join(OUT_DIR, t.id);
     fs.mkdirSync(dir, { recursive: true });
-    fs.writeFileSync(path.join(dir, 'index.html'), renderTermPage(t, data, termById));
+    fs.writeFileSync(path.join(dir, 'index.html'), renderTermPage(t, data, termById, archives));
   }
   fs.copyFileSync(path.join(SRC_DIR, 'styles.css'), path.join(OUT_DIR, 'styles.css'));
   fs.writeFileSync(path.join(OUT_DIR, '.nojekyll'), '');
-  console.log(`Built docs/index.html + ${data.terms.length} term pages (${data.references.length} references).`);
+  const archivedRefs = data.references.filter((r) => archives[r.url] && archives[r.url].archiveUrl).length;
+  console.log(`Built docs/index.html + ${data.terms.length} term pages (${data.references.length} references, ${archivedRefs} with archive fallback).`);
 }
 
 if (require.main === module) main();
 
-module.exports = { esc, renderCites, renderPage, renderTermPage };
+module.exports = { esc, formatArchiveTs, renderCites, renderPage, renderTermPage };
