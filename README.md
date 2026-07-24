@@ -39,6 +39,18 @@ node scripts/validate-data.js && node --test && node build.js
 
 Commit the regenerated `docs/` in the same change — CI enforces all of it.
 
+## Working here (agents and humans)
+
+- [`AGENTS.md`](AGENTS.md) — repo map, working agreements, which shared skills
+  apply, the agent-side tooling in `cronologia/core/tools`, and this repo's
+  place in the family.
+- [`context.md`](context.md) — domain background, current contents and scale,
+  and what "done" looks like for a term.
+- [`adr/`](adr/) — the standing decisions that govern this repo.
+- `.claude/skills/` — **generated** vendored copy of the `cronologia/core`
+  skills (start with `sourcing-rules`); refresh with
+  `python3 ../core/tools/sync-skills.py glossary`, never edit in place.
+
 ### Publish (GitHub Pages)
 
 Settings → Pages → Source: **GitHub Actions**, and Actions variable
