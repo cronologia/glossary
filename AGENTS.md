@@ -47,6 +47,9 @@ build.js                      Compiler: data/glossary.json -> docs/<lang>/index.
 test/glossary.test.js         node:test: esc, citation/related invariants, per-locale
                               index + term-page render, SEO head, switcher, disclaimer,
                               stable ids across locales, docs/ drift check
+KEYWORDS.md                   Search finding aid: term ids, display names and variants
+                              (generated block, `build-keywords.py`) + a hand-written
+                              "Search traps" section. Not a dataset, makes no claims
 adr/                          Decisions that govern this repo
 .claude/skills/               GENERATED — vendored copy of cronologia/core skills/
                               (manifest: .claude/skills/_synced.json)
@@ -140,7 +143,20 @@ python3 ../core/tools/dataset-query.py glossary refs --unarchived # references l
 python3 ../core/tools/unverified-report.py glossary --markdown    # unverified flags (expected: zero here)
 python3 ../core/tools/xref.py --repos glossary,fsspx,tariqa       # shared-entity consistency
 python3 ../core/tools/mine-prep.py <transcript>                   # transcript -> candidate sheet (project repos)
+python3 ../core/tools/build-keywords.py glossary --out KEYWORDS.md # regenerate the KEYWORDS.md search list
 ```
+
+**Before searching anything — a corpus, a transcript, a sibling dataset — read
+[`KEYWORDS.md`](KEYWORDS.md) first.** Its generated block lists all 34 term ids
+with their display names and variants; its hand-written "Search traps" section
+records what a naive search gets *wrong*, and every entry there was measured,
+not assumed. The headline for this repo: **search the term `id`, never the
+display name.** The id is a permanent URL, identical in every locale, and the
+projects' `[[term-id|localized alias]]` markers translate the visible text
+while leaving the id fixed — so `Philosophia perennis` returns **zero** hits in
+`fsspx` and `tariqa` while `philosophia-perennis` finds it in both. Regenerate
+the block with the command above (it splices between markers and preserves the
+hand-written section); add a trap whenever a search surprises you.
 
 `dataset-query.py` prints **locators** (`terms[29]`, `references[13]`) — read
 that slice, edit it, move on. `event`/`figure` are chronology subcommands and
