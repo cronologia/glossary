@@ -78,7 +78,20 @@ Roughly, the terms cluster as:
 Each term declares the projects that use it (`projects[]`): `fsspx` 16, `tl` 9,
 `tariqa` 8, `fsp` 4, `rcc` 3, and 2 each for `tfp`, `grupopuebla` and
 `perennialism` — which doubles as a map of which project pulls hardest on the
-shared vocabulary.
+shared vocabulary. Note these are **project codes, not repo names**: `tl`,
+`fsp`, `tfp` and `grupopuebla` have no repo in the family yet.
+
+[`KEYWORDS.md`](KEYWORDS.md) is the searchable index of all of the above — every
+term id, display name and recorded variant, generated from this dataset — plus
+a hand-written "Search traps" section for anyone about to search a corpus or a
+sibling dataset. Read it before searching. Its central point is the one thing
+a newcomer here gets wrong: **the term `id` is the search key, not the display
+name.** Ids are ASCII, hyphenated and diacritic-free (`Contra-Revolução` →
+`contra-revolucao`, `Bay'ah` → `bayah`, `CDF / DDF` → `cdf-ddf`), they are
+identical in every locale, and the projects' `[[term-id|alias]]` markers
+localize the visible text while the id stays fixed. The file makes no claims
+about the world — it lists strings so that sources, including hostile ones, can
+be found.
 
 References are mostly reference works and primary documents: 30 encyclopedia
 entries (24 Wikipedia EN, plus PT/ES and Britannica), 9 primary sources (mainly
