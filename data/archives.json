@@ -1,6 +1,6 @@
 {
   "generatedBy": "scripts/archive-refs.js",
-  "updatedAt": "2026-07-24",
+  "updatedAt": "2026-07-25",
   "snapshots": {
     "https://en.wikipedia.org/wiki/Apostolic_nunciature": {
       "refId": "wikipedia-nunciature",
@@ -25,6 +25,12 @@
       "archiveUrl": "https://web.archive.org/web/20260708094416/https://en.wikipedia.org/wiki/Dhikr",
       "timestamp": "20260708094416",
       "checkedAt": "2026-07-24"
+    },
+    "https://en.wikipedia.org/wiki/Dicastery_for_the_Doctrine_of_the_Faith": {
+      "refId": "wikipedia-ddf",
+      "archiveUrl": "https://web.archive.org/web/20260703072403/https://en.wikipedia.org/wiki/Dicastery_for_the_Doctrine_of_the_Faith",
+      "timestamp": "20260703072403",
+      "checkedAt": "2026-07-25"
     },
     "https://en.wikipedia.org/wiki/Foro_de_S%C3%A3o_Paulo": {
       "refId": "wikipedia-fsp-en",
