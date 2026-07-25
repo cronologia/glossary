@@ -4,6 +4,7 @@
     "subtitle": "Cited definitions of contested terms",
     "description": "The shared glossary of the Cronologia projects: short, source-referenced definitions of the canonical, theological and political vocabulary the chronologies rely on — one stable anchor per term, so project pages link instead of re-explaining.",
     "language": "en",
+    "siteUrl": "https://cronologia.github.io/glossary/",
     "lastUpdated": "2026-07-20",
     "dataQualityNote": "Definitions only, each cited like any other fact in the Cronologia family. Arguments about these terms stay in the projects' own disambiguation sections, which link here. Corrections against primary sources are welcome."
   },

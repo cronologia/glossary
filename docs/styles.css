@@ -151,3 +151,15 @@ ol.references a:hover { text-decoration: underline; }
 .term-link { color: var(--ink); text-decoration: none; }
 .term-link:hover { color: var(--accent); text-decoration: underline; }
 .term-meta { font-size: .85rem; color: var(--muted); display: flex; flex-wrap: wrap; gap: .3rem .8rem; align-items: center; margin-top: 1rem; }
+
+/* Language switcher (i18n) — adopted verbatim from the cronologia/core template */
+.lang-switch { float: right; display: flex; gap: .35rem; align-items: center; font-size: .8rem; font-weight: 700; }
+.lang-switch a { color: var(--muted); text-decoration: none; padding: .1rem .3rem; border-radius: 3px; }
+.lang-switch a:hover { color: var(--accent); background: var(--accent-soft); }
+.lang-switch .lang-current { color: var(--accent); background: var(--accent-soft); padding: .1rem .3rem; border-radius: 3px; }
+
+/* Machine-translation disclaimer (non-English pages) */
+.i18n-disclaimer {
+  background: #fff8e6; border-bottom: 1px solid #f0e2b8; color: #6b5a17;
+  font-size: .82rem; text-align: center; padding: .45rem 1rem;
+}

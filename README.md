@@ -15,6 +15,16 @@ https://cronologia.github.io/glossary/cebs/
 (The index page at `/glossary/` keeps `#anchor` permalinks too; the dedicated
 page is the canonical reference link.)
 
+The site is published in **English, Portuguese and Spanish**, with the locale as
+a path segment after the project — `/glossary/en/…`, `/glossary/pt/…`,
+`/glossary/es/…`. **Term ids are language-independent**, so the URLs above keep
+working (they redirect to the reader's locale) and
+`/glossary/pt/latae-sententiae/` is the same term as
+`/glossary/en/latae-sententiae/`. English is authoritative and hand-written; the
+`pt` and `es` pages are machine-translated from committed caches
+(`data/i18n/<lang>.json`) and say so, visibly, on every page. See
+[`adr/0002`](adr/0002-locales-pt-es-with-language-independent-term-urls.md).
+
 Same architecture as every Cronologia site (see `cronologia/core`): a single
 JSON file is the source of truth, compiled by a zero-dependency Node script
 into `docs/`, served by GitHub Pages.
@@ -26,7 +36,8 @@ into `docs/`, served by GitHub Pages.
 - **Arguments stay in the projects.** The projects' disambiguation sections
   hold the disputes; they link here for the terms.
 - **Stable URLs are API.** A term's `id` is its public page URL — never
-  rename one; if a term must change, keep the old id as a variant entry.
+  rename one, and never translate one; if a term must change, keep the old id
+  as a variant entry.
 
 ## Editing
 
@@ -37,7 +48,9 @@ Edit `data/glossary.json` (term: `id` kebab-case slug, `term`, optional
 node scripts/validate-data.js && node --test && node build.js
 ```
 
-Commit the regenerated `docs/` in the same change — CI enforces all of it.
+Translations live in `data/i18n/{pt,es}.json`, keyed by the English source
+string; `node scripts/translate.js --stats` reports per-locale coverage. Commit
+the regenerated `docs/` in the same change — CI enforces all of it.
 
 ## Working here (agents and humans)
 

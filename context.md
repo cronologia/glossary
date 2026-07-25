@@ -87,12 +87,22 @@ That mix is appropriate for definitions and would not be for a chronology.
 
 ## What the site renders
 
-- `docs/index.html` — the full glossary: a term index, every term with a stable
-  `#anchor`, its variants, its cited definition, its project chips and its
-  related-term links, then the numbered reference list.
-- `docs/<term-id>/index.html` — **one dedicated page per term** (34 of them),
-  each with its own locally-numbered `Sources` list. This is the canonical
-  link target: `https://cronologia.github.io/glossary/latae-sententiae/`.
+- `docs/<lang>/index.html` — the full glossary in each locale (`en`, `pt`,
+  `es`): a term index, every term with a stable `#anchor`, its variants, its
+  cited definition, its project chips and its related-term links, then the
+  numbered reference list.
+- `docs/<lang>/<term-id>/index.html` — **one dedicated page per term** (34 of
+  them, in each locale), each with its own locally-numbered `Sources` list.
+  This is the canonical link target:
+  `https://cronologia.github.io/glossary/en/latae-sententiae/`.
+- `docs/index.html` and `docs/<term-id>/index.html` — **redirect stubs** to the
+  reader's locale, so the pre-i18n links the project sites publish
+  (`https://cronologia.github.io/glossary/latae-sententiae/`) keep resolving.
+  Term ids are language-independent; only the display name and definition are
+  translated, and the `pt`/`es` pages carry a visible machine-translation
+  disclaimer (`adr/0002`).
+- `docs/sitemap.xml` / `docs/robots.txt` — every route × locale with `hreflang`
+  alternates.
 - **Preservation:** 41 of the 43 references carry an Internet Archive fallback
   link rendered from `data/archives.json`; the weekly `wayback.yml` workflow
   tops that up in CI and `link-health.yml` reports rot into a single issue

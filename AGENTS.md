@@ -12,10 +12,12 @@ repo are in [`adr/`](adr/); the family map is
 The **shared glossary** of the Cronologia family: short, source-referenced
 definitions of the canonical, theological and political vocabulary the
 chronologies rely on. One JSON file is the source of truth; a zero-dependency
-Node script compiles it into `docs/` — an index page with a stable `#anchor`
-per term **and one dedicated page per term** at
-`https://cronologia.github.io/glossary/<term-id>/`, which is the canonical
-reference link the project sites use.
+Node script compiles it into `docs/` — per locale (`en`, `pt`, `es`), an index
+page with a stable `#anchor` per term **and one dedicated page per term** at
+`https://cronologia.github.io/glossary/<locale>/<term-id>/`. The locale-less
+`https://cronologia.github.io/glossary/<term-id>/` — the canonical reference
+link the project sites use — stays valid as a redirect stub to the reader's
+locale, and the `<term-id>` is identical in every locale.
 
 This repo defines vocabulary. It does not host arguments and it does not carry
 a chronology: **definitions only, each cited** — and every dispute about a term
@@ -29,14 +31,22 @@ data/glossary.json            SOURCE OF TRUTH — meta, terms[] (id, term, varia
                               references[] (hand-edited)
 data/archives.json            GENERATED — Wayback snapshot cache written by
                               scripts/archive-refs.js in CI (never hand-edited)
+data/i18n/{pt,es}.json        GENERATED — machine-translation caches keyed by the
+                              English source string, managed by scripts/translate.js
+                              (never hand-edited; English is authoritative)
 src/styles.css                Stylesheet (copied into the build)
 scripts/validate-data.js      Schema check: kebab-case unique ids, non-empty sources[],
                               every source id and related id resolves (runs in CI)
 scripts/archive-refs.js       Wayback availability + Save Page Now (CI only, writes archives.json)
 scripts/check-links.js        Link-rot report (CI only; NEVER edits data)
-build.js                      Compiler: data/glossary.json -> docs/index.html + docs/<id>/index.html
-test/glossary.test.js         node:test: esc, citation/related invariants, per-term page
-                              render, docs/ drift check
+scripts/translate.js          Translation-cache manager: --stats reports per-locale
+                              coverage, normalizes/prunes data/i18n/<lang>.json
+build.js                      Compiler: data/glossary.json -> docs/<lang>/index.html +
+                              docs/<lang>/<id>/index.html for en/pt/es, plus the
+                              locale-less redirect stubs, sitemap.xml and robots.txt
+test/glossary.test.js         node:test: esc, citation/related invariants, per-locale
+                              index + term-page render, SEO head, switcher, disclaimer,
+                              stable ids across locales, docs/ drift check
 adr/                          Decisions that govern this repo
 .claude/skills/               GENERATED — vendored copy of cronologia/core skills/
                               (manifest: .claude/skills/_synced.json)
@@ -46,9 +56,9 @@ adr/                          Decisions that govern this repo
 docs/                         COMPILED OUTPUT, served by GitHub Pages (committed)
 ```
 
-Not present here, deliberately: `scripts/translate.js` (this site is
-single-locale English) and `scripts/sync-glossary-terms.js` (this repo is the
-*source* of the term ids — the projects vendor them, not the other way round).
+Not present here, deliberately: `scripts/sync-glossary-terms.js` (this repo is
+the *source* of the term ids — the projects vendor them, not the other way
+round).
 
 ## Working agreements
 
@@ -59,13 +69,18 @@ single-locale English) and `scripts/sync-glossary-terms.js` (this repo is the
 3. **Definitions only, and cited.** The validator enforces a non-empty
    `sources[]` on every term, and that each id resolves to a `references[]`
    entry. A term with no source does not ship.
-4. **Ids are forever.** A term `id` is a public URL. Never rename one; if the
-   preferred wording changes, keep the old id and put the new wording in
-   `term`/`variants` (`adr/0001`).
+4. **Ids are forever, and language-independent.** A term `id` is a public URL.
+   Never rename one, and never translate one: `/glossary/{en,pt,es}/<id>/` is
+   the same `<id>` in every locale. If the preferred wording changes, keep the
+   old id and put the new wording in `term`/`variants` (`adr/0001`).
 5. **One repo, one committer per wave.** Exactly one agent owns this dataset at
    a time; `git status` stays empty in repos you were not assigned.
 6. **Never hand-edit generated files:** `docs/`, `data/archives.json`,
-   `.claude/skills/`.
+   `data/i18n/*.json`, `.claude/skills/`.
+7. **English is authoritative.** `pt`/`es` are machine-translated and carry a
+   visible disclaimer on every page. When a definition changes, re-author the
+   affected cache entries — `node scripts/translate.js --stats` reports what is
+   missing (`adr/0002`).
 
 ## Sourcing rules
 
@@ -136,10 +151,11 @@ project datasets also carry, so the vocabulary stays consistent across repos.
 ## The operational loop
 
 ```bash
-node scripts/validate-data.js   # ids, non-empty sources[], source/related ids resolve
-node --test                     # invariants, per-term page render, docs drift check
-node build.js                   # compile data/glossary.json -> docs/ (index + one page per term)
-git add data docs && git commit  # data + regenerated docs in ONE commit
+node scripts/validate-data.js   # ids, non-empty sources[], source/related ids resolve, i18n caches
+node scripts/translate.js --stats # per-locale translation coverage (offline, read-only)
+node --test                     # invariants, per-locale render, SEO/disclaimer, docs drift check
+node build.js                   # compile data/glossary.json -> docs/{en,pt,es}/ + redirect stubs
+git add data docs && git commit  # data + i18n caches + regenerated docs in ONE commit
 ```
 
 Documentation-only changes must leave `docs/` byte-identical — check with
