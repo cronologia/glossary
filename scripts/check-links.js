@@ -65,13 +65,27 @@ const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
  *  HTTP header values must be Latin-1 (a ByteString), but the glossary's
  *  meta.title carries an em-dash ("Cronologia — Glossary"); fold dashes and
  *  drop any remaining non-ASCII so fetch never throws on the header. */
+/**
+ * Make a string safe to place inside an HTTP header value. A project title with
+ * an em dash (U+2014) or accented letters (e.g. "São Pio X — Cronologia") is not
+ * a valid HTTP header byte sequence, so a verbatim User-Agent makes fetch throw
+ * a ByteString error that gets swallowed — silently reporting every reference as
+ * inconclusive. Fold diacritics, normalize Unicode dashes, and drop anything left
+ * outside printable ASCII. Plain-ASCII names pass through unchanged.
+ */
+function headerSafe(s) {
+  return String(s)
+    .normalize('NFKD')
+    .replace(/[̀-ͯ]/g, '')   // strip combining diacritics (São -> Sao)
+    .replace(/[‐-―]/g, '-')  // Unicode hyphens/dashes (em/en) -> '-'
+    .replace(/[^\x20-\x7e]/g, '')      // drop anything left outside printable ASCII
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
 function deriveUserAgent(projectName) {
   const raw = (typeof projectName === 'string' && projectName.trim()) ? projectName.trim() : 'Cronologia glossary';
-  const name = raw
-    .replace(/[‐-―]/g, '-')
-    .replace(/[^\x20-\x7E]/g, '')
-    .replace(/\s+/g, ' ')
-    .trim() || 'Cronologia glossary';
+  const name = headerSafe(raw) || 'Cronologia glossary';
   return `cronologia-check-links/1.0 (${name}; +https://github.com/cronologia/glossary)`;
 }
 
@@ -433,7 +447,7 @@ if (require.main === module) {
 }
 
 module.exports = {
-  deriveUserAgent, extractTitle, decodeEntities, titleTokens, titleSimilarity,
+  deriveUserAgent, headerSafe, extractTitle, decodeEntities, titleTokens, titleSimilarity,
   looksLikeNotFound, isSoftRedirect, classifyStatus, parseWaybackAvailable,
   isPriorityArchive, summarize, toMarkdown, parseArgs,
 };
