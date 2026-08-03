@@ -1,6 +1,6 @@
 {
   "generatedBy": "scripts/archive-refs.js",
-  "updatedAt": "2026-07-27",
+  "updatedAt": "2026-08-03",
   "snapshots": {
     "https://en.wikipedia.org/wiki/Apostolic_nunciature": {
       "refId": "wikipedia-nunciature",
@@ -226,27 +226,27 @@
     },
     "https://www.vatican.va/content/john-paul-ii/en/motu_proprio/documents/hf_jp-ii_motu-proprio_02071988_ecclesia-dei.html": {
       "refId": "ecclesia-dei-1988",
-      "archiveUrl": "https://web.archive.org/web/20260722212754/https://www.vatican.va/content/john-paul-ii/en/motu_proprio/documents/hf_jp-ii_motu-proprio_02071988_ecclesia-dei.html",
-      "timestamp": "20260722212754",
-      "checkedAt": "2026-07-27"
+      "archiveUrl": "https://web.archive.org/web/20260803100534/https://www.vatican.va/content/john-paul-ii/en/motu_proprio/documents/hf_jp-ii_motu-proprio_02071988_ecclesia-dei.html",
+      "timestamp": "20260803100534",
+      "checkedAt": "2026-08-03"
     },
     "https://www.vatican.va/roman_curia/congregations/cfaith/documents/rc_con_cfaith_doc_19840806_theology-liberation_en.html": {
       "refId": "libertatis-nuntius",
-      "archiveUrl": "https://web.archive.org/web/20260723084514/https://www.vatican.va/roman_curia/congregations/cfaith/documents/rc_con_cfaith_doc_19840806_theology-liberation_en.html",
-      "timestamp": "20260723084514",
-      "checkedAt": "2026-07-24"
+      "archiveUrl": "https://web.archive.org/web/20260801220033/https://www.vatican.va/roman_curia/congregations/cfaith/documents/rc_con_cfaith_doc_19840806_theology-liberation_en.html",
+      "timestamp": "20260801220033",
+      "checkedAt": "2026-08-03"
     },
     "https://www.vatican.va/roman_curia/congregations/cfaith/documents/rc_con_cfaith_doc_19850311_notif-boff_en.html": {
       "refId": "notif-boff",
-      "archiveUrl": "https://web.archive.org/web/20260610103606/https://www.vatican.va/roman_curia/congregations/cfaith/documents/rc_con_cfaith_doc_19850311_notif-boff_en.html",
-      "timestamp": "20260610103606",
-      "checkedAt": "2026-07-27"
+      "archiveUrl": "https://web.archive.org/web/20260801194619/https://www.vatican.va/roman_curia/congregations/cfaith/documents/rc_con_cfaith_doc_19850311_notif-boff_en.html",
+      "timestamp": "20260801194619",
+      "checkedAt": "2026-08-03"
     },
     "https://www.vatican.va/roman_curia/congregations/cfaith/documents/rc_con_cfaith_doc_20061126_notification-sobrino_en.html": {
       "refId": "notif-sobrino",
-      "archiveUrl": "https://web.archive.org/web/20260714123806/https://www.vatican.va/roman_curia/congregations/cfaith/documents/rc_con_cfaith_doc_20061126_notification-sobrino_en.html",
-      "timestamp": "20260714123806",
-      "checkedAt": "2026-07-24"
+      "archiveUrl": "https://web.archive.org/web/20260727101415/https://www.vatican.va/roman_curia/congregations/cfaith/documents/rc_con_cfaith_doc_20061126_notification-sobrino_en.html",
+      "timestamp": "20260727101415",
+      "checkedAt": "2026-08-03"
     },
     "https://www.vaticannews.va/en/pope/news/2019-02/pope-francis-lifts-sanctions-ernesto-cardenal.html": {
       "refId": "vatican-news-cardenal",
