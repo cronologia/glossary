@@ -7,6 +7,7 @@ const path = require('node:path');
 const {
   esc, renderPage, renderTermPage, renderStub, renderSitemap, renderRobots,
   LOCALES, loadDict, loadArchives, siteBase, localizeData, routesFor, langSwitcher, relUp, segCount,
+  collectTranslatable,
 } = require('../build.js');
 
 const ROOT = path.join(__dirname, '..');
@@ -179,4 +180,35 @@ test('committed docs/ is the current render for every locale (no drift)', () => 
       );
     }
   }
+});
+
+/**
+ * Every string localizeData actually hands to the translator.
+ *
+ * The lookup is `Object.prototype.hasOwnProperty.call(dict, s)`, which on a
+ * Proxy fires `getOwnPropertyDescriptor` -- not `has`, and not `get`. Trapping
+ * the wrong one yields an empty list and the comparison would pass for the
+ * wrong reason, so the trap is asserted to have fired. Empty strings are
+ * dropped: localizeData passes them through harmlessly while
+ * collectTranslatable filters them, because listing "" as awaiting translation
+ * is noise in a coverage report.
+ */
+function stringsSeenByLocalize(input) {
+  const seen = [];
+  const dict = new Proxy({}, {
+    getOwnPropertyDescriptor: (_t, k) => { if (typeof k === 'string') seen.push(k); return undefined; },
+  });
+  localizeData(input, dict, 'es');
+  assert.ok(seen.length > 0, 'instrumentation failed: the translator lookup was never observed');
+  return seen.filter((s) => s.trim());
+}
+
+test('collectTranslatable returns exactly the strings localizeData translates', () => {
+  const input = data;
+  const collected = collectTranslatable(input);
+  const localized = stringsSeenByLocalize(input);
+  assert.deepEqual(new Set(collected), new Set(localized),
+    'the coverage walk and the render walk disagree - one of them is lying about what gets translated');
+  assert.equal(collected.length, new Set(collected).size, 'collectTranslatable must deduplicate');
+  assert.ok(collected.length > 0, 'the dataset has translatable prose');
 });
