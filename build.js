@@ -127,6 +127,29 @@ function translator(dict) {
 }
 
 /**
+ * Every string this build would send through the dictionaries, in walk order,
+ * deduplicated. Mirrors localizeData's walk below -- and is imported by
+ * scripts/translate.js instead of being reimplemented there, because the
+ * reimplementation drifted (cronologia/core#81, #82). A test asserts the two
+ * visit the same set.
+ */
+function collectTranslatable(data) {
+  const out = [];
+  const seen = new Set();
+  const walk = (val, key) => {
+    if (key === 'references') return;
+    if (Array.isArray(val)) { val.forEach((v) => walk(v, key)); return; }
+    if (val && typeof val === 'object') { for (const k of Object.keys(val)) walk(val[k], k); return; }
+    if (typeof val === 'string' && val.trim() && TRANSLATABLE_KEYS.has(key) && !seen.has(val)) {
+      seen.add(val);
+      out.push(val);
+    }
+  };
+  walk(data, null);
+  return out;
+}
+
+/**
  * Deep-copy `data` with every translatable prose field replaced by its
  * translation (fallback: English), and meta.language set to `lang`. The whole
  * `references` array is passed through verbatim (bibliographic data), and `id`
@@ -555,6 +578,7 @@ function main() {
 if (require.main === module) main();
 
 module.exports = {
+  collectTranslatable,
   esc, formatArchiveTs, renderCites, renderPage, renderTermPage,
   LOCALES, OG_LOCALE, UI, TRANSLATABLE_KEYS, loadDict, loadArchives, siteBase, translator,
   localizeData, routesFor, segCount, relUp, alternates, seoHead, langSwitcher,
