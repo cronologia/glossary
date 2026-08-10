@@ -1,6 +1,6 @@
 {
   "generatedBy": "scripts/archive-refs.js",
-  "updatedAt": "2026-08-03",
+  "updatedAt": "2026-08-10",
   "snapshots": {
     "https://en.wikipedia.org/wiki/Apostolic_nunciature": {
       "refId": "wikipedia-nunciature",
@@ -214,15 +214,15 @@
     },
     "https://www.vatican.va/archive/cod-iuris-canonici/cic_index_en.html": {
       "refId": "cic-1983",
-      "archiveUrl": "https://web.archive.org/web/20260727101149/https://www.vatican.va/archive/cod-iuris-canonici/cic_index_en.html",
-      "timestamp": "20260727101149",
-      "checkedAt": "2026-07-27"
+      "archiveUrl": "https://web.archive.org/web/20260804232335/https://www.vatican.va/archive/cod-iuris-canonici/cic_index_en.html",
+      "timestamp": "20260804232335",
+      "checkedAt": "2026-08-10"
     },
     "https://www.vatican.va/content/benedict-xvi/en/letters/2009/documents/hf_ben-xvi_let_20090310_remissione-scomunica.html": {
       "refId": "benedict-2009-letter",
-      "archiveUrl": "https://web.archive.org/web/20260727101239/https://www.vatican.va/content/benedict-xvi/en/letters/2009/documents/hf_ben-xvi_let_20090310_remissione-scomunica.html",
-      "timestamp": "20260727101239",
-      "checkedAt": "2026-07-27"
+      "archiveUrl": "https://web.archive.org/web/20260810080805/https://www.vatican.va/content/benedict-xvi/en/letters/2009/documents/hf_ben-xvi_let_20090310_remissione-scomunica.html",
+      "timestamp": "20260810080805",
+      "checkedAt": "2026-08-10"
     },
     "https://www.vatican.va/content/john-paul-ii/en/motu_proprio/documents/hf_jp-ii_motu-proprio_02071988_ecclesia-dei.html": {
       "refId": "ecclesia-dei-1988",
@@ -232,15 +232,15 @@
     },
     "https://www.vatican.va/roman_curia/congregations/cfaith/documents/rc_con_cfaith_doc_19840806_theology-liberation_en.html": {
       "refId": "libertatis-nuntius",
-      "archiveUrl": "https://web.archive.org/web/20260801220033/https://www.vatican.va/roman_curia/congregations/cfaith/documents/rc_con_cfaith_doc_19840806_theology-liberation_en.html",
-      "timestamp": "20260801220033",
-      "checkedAt": "2026-08-03"
+      "archiveUrl": "https://web.archive.org/web/20260805230824/https://www.vatican.va/roman_curia/congregations/cfaith/documents/rc_con_cfaith_doc_19840806_theology-liberation_en.html",
+      "timestamp": "20260805230824",
+      "checkedAt": "2026-08-10"
     },
     "https://www.vatican.va/roman_curia/congregations/cfaith/documents/rc_con_cfaith_doc_19850311_notif-boff_en.html": {
       "refId": "notif-boff",
-      "archiveUrl": "https://web.archive.org/web/20260801194619/https://www.vatican.va/roman_curia/congregations/cfaith/documents/rc_con_cfaith_doc_19850311_notif-boff_en.html",
-      "timestamp": "20260801194619",
-      "checkedAt": "2026-08-03"
+      "archiveUrl": "https://web.archive.org/web/20260803100919/https://www.vatican.va/roman_curia/congregations/cfaith/documents/rc_con_cfaith_doc_19850311_notif-boff_en.html",
+      "timestamp": "20260803100919",
+      "checkedAt": "2026-08-10"
     },
     "https://www.vatican.va/roman_curia/congregations/cfaith/documents/rc_con_cfaith_doc_20061126_notification-sobrino_en.html": {
       "refId": "notif-sobrino",
