@@ -1,6 +1,6 @@
 {
   "generatedBy": "scripts/archive-refs.js",
-  "updatedAt": "2026-09-27",
+  "updatedAt": "2026-09-28",
   "snapshots": {
     "https://en.wikipedia.org/wiki/Apostolic_nunciature": {
       "refId": "wikipedia-nunciature",
@@ -220,9 +220,9 @@
     },
     "https://www.vatican.va/content/benedict-xvi/en/letters/2009/documents/hf_ben-xvi_let_20090310_remissione-scomunica.html": {
       "refId": "benedict-2009-letter",
-      "archiveUrl": "https://web.archive.org/web/20260907124316/https://www.vatican.va/content/benedict-xvi/en/letters/2009/documents/hf_ben-xvi_let_20090310_remissione-scomunica.html",
-      "timestamp": "20260907124316",
-      "checkedAt": "2026-09-07"
+      "archiveUrl": "https://web.archive.org/web/20260928140539/https://www.vatican.va/content/benedict-xvi/en/letters/2009/documents/hf_ben-xvi_let_20090310_remissione-scomunica.html",
+      "timestamp": "20260928140539",
+      "checkedAt": "2026-09-28"
     },
     "https://www.vatican.va/content/john-paul-ii/en/motu_proprio/documents/hf_jp-ii_motu-proprio_02071988_ecclesia-dei.html": {
       "refId": "ecclesia-dei-1988",
@@ -238,15 +238,15 @@
     },
     "https://www.vatican.va/roman_curia/congregations/cfaith/documents/rc_con_cfaith_doc_19850311_notif-boff_en.html": {
       "refId": "notif-boff",
-      "archiveUrl": "https://web.archive.org/web/20260907124451/https://www.vatican.va/roman_curia/congregations/cfaith/documents/rc_con_cfaith_doc_19850311_notif-boff_en.html",
-      "timestamp": "20260907124451",
-      "checkedAt": "2026-09-27"
+      "archiveUrl": "https://web.archive.org/web/20260927175801/https://www.vatican.va/roman_curia/congregations/cfaith/documents/rc_con_cfaith_doc_19850311_notif-boff_en.html",
+      "timestamp": "20260927175801",
+      "checkedAt": "2026-09-28"
     },
     "https://www.vatican.va/roman_curia/congregations/cfaith/documents/rc_con_cfaith_doc_20061126_notification-sobrino_en.html": {
       "refId": "notif-sobrino",
-      "archiveUrl": "https://web.archive.org/web/20260919101726/https://www.vatican.va/roman_curia/congregations/cfaith/documents/rc_con_cfaith_doc_20061126_notification-sobrino_en.html",
-      "timestamp": "20260919101726",
-      "checkedAt": "2026-09-27"
+      "archiveUrl": "https://web.archive.org/web/20260927175832/https://www.vatican.va/roman_curia/congregations/cfaith/documents/rc_con_cfaith_doc_20061126_notification-sobrino_en.html",
+      "timestamp": "20260927175832",
+      "checkedAt": "2026-09-28"
     },
     "https://www.vaticannews.va/en/pope/news/2019-02/pope-francis-lifts-sanctions-ernesto-cardenal.html": {
       "refId": "vatican-news-cardenal",
