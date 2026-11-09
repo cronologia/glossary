@@ -1,6 +1,6 @@
 {
   "generatedBy": "scripts/archive-refs.js",
-  "updatedAt": "2026-11-02",
+  "updatedAt": "2026-11-09",
   "snapshots": {
     "https://en.wikipedia.org/wiki/Apostolic_nunciature": {
       "refId": "wikipedia-nunciature",
@@ -208,15 +208,15 @@
     },
     "https://www.pliniocorreadeoliveira.info/rcr.pdf": {
       "refId": "rcr-1959",
-      "archiveUrl": "https://web.archive.org/web/20261024195939/https://www.pliniocorreadeoliveira.info/RCR.pdf",
-      "timestamp": "20261024195939",
-      "checkedAt": "2026-11-02"
+      "archiveUrl": "https://web.archive.org/web/20261102161405/https://www.pliniocorreadeoliveira.info/rcr.pdf",
+      "timestamp": "20261102161405",
+      "checkedAt": "2026-11-09"
     },
     "https://www.vatican.va/archive/cod-iuris-canonici/cic_index_en.html": {
       "refId": "cic-1983",
       "archiveUrl": "https://web.archive.org/web/20261102160837/https://www.vatican.va/archive/cod-iuris-canonici/cic_index_en.html",
       "timestamp": "20261102160837",
-      "checkedAt": "2026-11-02"
+      "checkedAt": "2026-11-09"
     },
     "https://www.vatican.va/content/benedict-xvi/en/letters/2009/documents/hf_ben-xvi_let_20090310_remissione-scomunica.html": {
       "refId": "benedict-2009-letter",
@@ -228,7 +228,7 @@
       "refId": "ecclesia-dei-1988",
       "archiveUrl": "https://web.archive.org/web/20261102154442/https://www.vatican.va/content/john-paul-ii/en/motu_proprio/documents/hf_jp-ii_motu-proprio_02071988_ecclesia-dei.html",
       "timestamp": "20261102154442",
-      "checkedAt": "2026-11-02"
+      "checkedAt": "2026-11-09"
     },
     "https://www.vatican.va/roman_curia/congregations/cfaith/documents/rc_con_cfaith_doc_19840806_theology-liberation_en.html": {
       "refId": "libertatis-nuntius",
